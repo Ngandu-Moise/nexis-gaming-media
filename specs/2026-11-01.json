@@ -1,0 +1,29 @@
+{
+ "scenes": [
+  {
+   "kicker": "J-18",
+   "title": "GTA 6 sort le 19 novembre. Ta console est prête ?",
+   "accent_last": true,
+   "duration": 3,
+   "voice": "Plus que dix-huit jours avant GTA 6 ! Ta console est prête ?"
+  },
+  {
+   "kicker": "Attention",
+   "title": "Seulement sur PS5 et Xbox Series X|S",
+   "body": "Pas de PS4, pas de Xbox One. Et pas de version PC au lancement.",
+   "duration": 4,
+   "voice": "Attention : uniquement sur PS5 et Xbox Série X et S. Pas de PS4, et pas de PC au lancement."
+  },
+  {
+   "kicker": "Pas encore équipé ?",
+   "title": "Passe chez Nexis Gaming avant le jour J",
+   "body": "Consoles, manettes, installation et réparation, au même endroit à Kolwezi.",
+   "accent_last": true,
+   "duration": 3.5,
+   "voice": "Pas encore équipé ? Passe chez Nexis Gaming avant le jour J !"
+  }
+ ],
+ "cta": true,
+ "cta_duration": 3.5,
+ "cta_voice": "Nexis Gaming, avenue du 30 juin à Kolwezi. Écris-nous en privé !"
+}

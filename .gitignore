@@ -1,0 +1,4 @@
+tools/piper/
+tools/voices/
+*.part.mp4
+videos/tmp*/
