@@ -9,9 +9,10 @@ Spec (moteur "motion") :
   "scenes": [
     {"kicker": "...", "big": "J-16", "title": "Ligne 1\\nLigne 2", "accent_last": true,
      "body": "...", "items": ["...", "..."], "cross": ["PS4"], "voice": "texte lu",
+     "voice_url": "https://... .mp3 (voix ElevenLabs générée par Higgsfield, prioritaire sur Piper)",
      "clip": "https://... .mp4 (clip IA vertical, optionnel)", "duration": 4}
   ],
-  "cta": true, "cta_voice": "..."
+  "cta": true, "cta_voice": "...", "cta_voice_url": "https://... .mp3"
 }
 Une scène avec "clip" affiche la vidéo en fond (texte en bas) ; sans "clip", fond animé Nexis.
 --stills : génère seulement des PNG de contrôle (un par scène) sans vidéo.
@@ -44,7 +45,7 @@ def fetch(src, dst):
     else:
         dst = src if os.path.isabs(src) else os.path.join(os.getcwd(), src)
     if probe(dst) <= 0:
-        sys.exit("clip illisible : " + src)
+        sys.exit("fichier illisible : " + src)
     return dst
 
 
@@ -52,13 +53,18 @@ def main(spec_path, out, stills=False):
     spec = json.load(open(spec_path))
     scenes = spec["scenes"]
     tmp = tempfile.mkdtemp(prefix="nexis-")
-    items = scenes + ([{"_cta": True, "voice": spec.get("cta_voice", CTA_VOICE),
+    items = scenes + ([{"_cta": True, "voice": spec.get("cta_voice", CTA_VOICE), "voice_url": spec.get("cta_voice_url"),
                         "duration": spec.get("cta_duration", 4.5)}] if spec.get("cta", True) else [])
     tl, voices, t = [], [], 0.0
     for i, sc in enumerate(items):
         d = float(sc.get("duration", 3.5))
-        if sc.get("voice"):
-            w = os.path.join(tmp, f"v{i}.wav")
+        w = os.path.join(tmp, f"v{i}.wav")
+        if sc.get("voice_url"):  # voix naturelle (ElevenLabs via Higgsfield)
+            src = fetch(sc["voice_url"], os.path.join(tmp, f"v{i}.src"))
+            run(["ffmpeg", "-y", "-i", src, "-ac", "1", "-ar", "44100", w])
+            d = max(d, probe(w) + 0.45)
+            voices.append((t + 0.2, w))
+        elif sc.get("voice"):  # secours : Piper hors ligne
             d = max(d, render.say(sc["voice"], w) + 0.55)
             voices.append((t + 0.25, w))
         tl.append({"start": round(t, 3), "dur": round(d, 3)})
