@@ -35,7 +35,7 @@ jobs:
           import json, os
           todo = [p.strip() for p in open("changed.txt") if p.strip()]
           todo = [p for p in todo if os.path.exists(p) and json.load(open(p)).get("engine") == "motion"]
-          open("todo.txt", "w").write("\n".join(todo))
+          open("todo.txt", "w").write("".join(t + "\n" for t in todo))
           open(os.environ["GITHUB_OUTPUT"], "a").write(f"count={len(todo)}\n")
           print("à monter :", todo)
           PY
@@ -55,7 +55,7 @@ jobs:
         if: steps.todo.outputs.count != '0'
         run: |
           export NODE_PATH="$PWD/node_modules"
-          while read -r spec; do
+          while read -r spec || [ -n "$spec" ]; do
             [ -z "$spec" ] && continue
             out="videos/$(basename "$spec" .json).mp4"
             python3 tools/motion/make_video.py "$spec" "$out"
