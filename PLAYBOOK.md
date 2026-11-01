@@ -27,7 +27,7 @@ Plan détaillé et calculs : https://claude.ai/artifact/MSnUWa3NpyenDBpPeLwz1t
 
 ## Sujets : les formats les plus populaires du gaming
 
-Choisir chaque fois le sujet le plus fort du moment dans le pilier du jour. Le samedi, on se demande
+Choisir chaque fois le sujet le plus fort du moment dans le pilier du jour. Chaque dimanche (bilan), on se demande
 « qu'est-ce que les joueurs regardent cette semaine ? » : jeux les plus joués et les plus vendus,
 sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vidéos (Metricool).
 
