@@ -1,4 +1,0 @@
-{"engine":"motion","test":true,"scenes":[
- {"kicker":"Test","title":"Clip distant\ntéléchargé par Actions","accent_last":true,"voice":"Test du montage automatique.","clip":"https://raw.githubusercontent.com/Ngandu-Moise/nexis-gaming-media/main/videos/2026-11-01-motion.mp4"},
- {"kicker":"Test","title":"Fond animé Nexis","items":["Voix off","Musique"],"voice":"Deuxième scène."}
-],"cta":true}

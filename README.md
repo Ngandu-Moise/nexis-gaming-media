@@ -6,4 +6,7 @@ Vidéos publiées chaque jour par Nexis Gaming (Kolwezi) sur TikTok, Instagram e
 - `produits.md` : liste des produits et prix (seule source autorisée pour les prix)
 - `journal.md` : historique des publications et bilans hebdomadaires
 - `videos/` : vidéos publiées · `specs/` : textes et voix off de chaque vidéo
-- `tools/` : montage (`render.py`) et installation de la voix (`setup.sh`)
+- `tools/` : installation de la voix (`setup.sh`), ancien montage (`render.py`)
+- `tools/motion/` : montage actuel (clips IA Higgsfield + textes animés), lancé par GitHub Actions
+  (`.github/workflows/render.yml`) à chaque spec `"engine": "motion"` poussé
+- `rushes/` : vos vraies vidéos (déballage, atelier) à utiliser en priorité
