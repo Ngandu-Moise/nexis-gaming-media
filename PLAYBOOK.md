@@ -12,7 +12,8 @@ Plan détaillé et calculs : https://claude.ai/artifact/MSnUWa3NpyenDBpPeLwz1t
 - Marque Metricool : brandId `2916492` (libellé « Boa Games »). Ne jamais publier sur Facebook.
 - Fuseau du public : Africa/Lubumbashi (UTC+2). Lire le fuseau de la marque avec
   getBrandSettings à chaque exécution et convertir l'heure de publication en conséquence.
-- Higgsfield : abonnement Pro à partir du 3 novembre 2026, 600 crédits renouvelés chaque mois.
+- Higgsfield : abonnement Pro à partir du 3 novembre 2026, 600 crédits par cycle d'un mois,
+  renouvelés le 3 de chaque mois (cycle du 3 au 2 du mois suivant).
   Le propriétaire a donné une autonomie totale pour les sujets et la production.
 
 ## Rythme (à partir du 3 novembre 2026)
@@ -21,7 +22,8 @@ Plan détaillé et calculs : https://claude.ai/artifact/MSnUWa3NpyenDBpPeLwz1t
   en comptant sans interruption d'un mois à l'autre (29 nov. → 1er déc. → 3 déc. … 31 déc. → 2 janv.).
   Test : `python3 -c "import datetime as d;print((d.date.today()-d.date(2026,11,3)).days%2==0)"` → True = jour de publication.
 - Heure : 18 h en semaine, 12 h le samedi et le dimanche (heure de Kolwezi).
-- Le 2 novembre 2026 seulement : vidéo motion design sans clip IA (abonnement pas encore actif).
+- Le 2 novembre 2026 seulement : vidéo motion design sans clip IA (abonnement pas encore actif),
+  avec la voix ElevenLabs (≈ 2 crédits sur le solde gratuit restant).
 - Jour sans publication : ne rien créer. Vérifier seulement que la publication de la veille est
   bien partie (getScheduledPosts) et le solde Higgsfield (balance). Signaler un problème, sinon rien.
 
@@ -74,10 +76,25 @@ sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vid�
 | 3 Contenu | ~5 s | clip IA + texte | Kling 3.0 | 8,75 |
 | 4 Info clé | 4–6 s | liste, gros chiffre, comparatif sur fond animé | motion | 0 |
 | Fin | ~5 s | NEXIS GAMING + adresse (automatique) | motion | 0 |
+| Voix off | toute la vidéo | voix naturelle ElevenLabs, une piste par scène + fin | Higgsfield | ≈ 2 |
 
 Spec `specs/AAAA-MM-JJ.json` (voir l'en-tête de `tools/motion/make_video.py`) :
 `{"engine": "motion", "scenes": [{"kicker", "title" ("\n" = nouvelle ligne), "accent_last", "body",
-"big", "items", "cross", "voice", "clip"}], "cta": true}`. Voix : 1 ou 2 phrases courtes par scène.
+"big", "items", "cross", "voice", "voice_url", "clip"}], "cta": true, "cta_voice", "cta_voice_url"}`.
+Voix : 1 ou 2 phrases courtes par scène ; "voice" garde le texte, "voice_url" l'audio ElevenLabs.
+
+### Voix off naturelle (ElevenLabs via Higgsfield)
+
+- generate_audio_batch, une requête par scène + une pour la fin : model `text2speech_v2`,
+  variant `elevenlabs`, voice_type `preset`, voice_id = VOIX ci-dessous, prompt = texte de la scène,
+  use_unlim false. Puis jobs_wait ; chaque result_url va dans "voice_url" (fin : "cta_voice_url").
+  Coût ≈ 0,45 crédit pour 130 caractères, soit ≈ 2 crédits par vidéo.
+- VOIX : `f1e8226e-2248-4d5f-b43c-0a79e9949dbf` (voix masculine « Andre »).
+  Voix féminine possible : `023ebf5e-1970-40d8-825c-a5ef6a1dd4ff` (« Ines »). Garder la même voix
+  partout, c'est la voix de la marque.
+- Écrire les nombres, sigles et noms tels qu'ils se prononcent si besoin (« Xbox Série X et S »,
+  « PS5 »). Ponctuation expressive (« ! », « ? ») : la voix suit l'intonation.
+- Si Higgsfield ne répond pas : laisser seulement "voice" (Piper, hors ligne) et le noter.
 
 ### Clips Higgsfield
 
@@ -103,13 +120,20 @@ Spec `specs/AAAA-MM-JJ.json` (voir l'en-tête de `tools/motion/make_video.py`) :
   retirer le "clip" de cette scène (fond animé). La vidéo sort quand même.
 - Sans abonnement ou en cas de panne Higgsfield : vidéo sans clip (0 crédit), le noter.
 
-## Budget de crédits (600 par mois)
+## Budget de crédits (600 par cycle, du 3 au 2 du mois suivant)
 
-- Prévu : 15 vidéos × 26,25 = 394 crédits ; réserve ≈ 200 pour les reprises.
-- Avant de générer : besoin = vidéos restantes jusqu'au renouvellement × 26,25.
-  Solde ≥ besoin → 3 clips. Solde < besoin → 2 clips. Solde < 8,75 → aucun clip.
-- Solde < 100 crédits avant le 20 du mois → notification au propriétaire.
-- Réserve encore disponible la dernière semaine → 4e clip IA possible sur une date forte.
+- Coût de base d'une vidéo : 3 clips (26,25) + voix (≈ 2) = **≈ 28,25 crédits**.
+  Cycle de 15 vidéos : ≈ 424 crédits ; il reste ≈ 176 crédits pour les reprises et la fin de cycle.
+- Les crédits non utilisés ne sont pas reportés : ils sont dépensés sur les **3 dernières vidéos
+  du cycle** (pour le premier cycle : 27 nov., 29 nov. et 1er déc.).
+- Avant de générer, compter V = vidéos restantes jusqu'au 2 inclus (jours de publication restants).
+  - V > 3 : besoin = V × 28,25. Solde ≥ besoin → 3 clips. Solde < besoin → 2 clips.
+    Solde < 10 → aucun clip (voix seule si possible).
+  - V ≤ 3 (fin de cycle) : budget de la vidéo = (solde − 9) / V, où 9 crédits restent pour
+    une reprise. Avec ce budget, ajouter dans l'ordre : 4e clip, 5e clip (vidéo entièrement IA),
+    puis clip d'accroche en 10 s (17,5 au lieu de 8,75). Pour la toute dernière vidéo (V = 1),
+    budget = solde, une fois la reprise éventuelle faite.
+- Solde < 100 crédits avant le 20 du cycle → notification au propriétaire.
 - Ne jamais acheter de crédits ni changer d'abonnement.
 
 ## Publication Metricool
@@ -128,7 +152,7 @@ createScheduledPost le jour même à l'heure prévue, convertie dans le fuseau d
 
 ## Journal et bilan
 
-- `journal.md` : date, sujet, durée, clips (générés / refaits), crédits dépensés, solde, id Metricool.
+- `journal.md` : date, sujet, durée, clips (générés / refaits), voix, crédits dépensés, solde, id Metricool.
 - Dimanche : bilan de la semaine (vues, partages, abonnés par vidéo TikTok via Metricool ;
   crédits dépensés et solde), puis choix des sujets de la semaine suivante selon les tendances.
 - En cas d'échec : écrire l'erreur dans `journal.md` et notifier le propriétaire.
