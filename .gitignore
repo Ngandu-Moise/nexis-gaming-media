@@ -4,3 +4,6 @@ tools/voices/
 videos/tmp*/
 tools/__pycache__/
 tools/motion/out/
+node_modules/
+changed.txt
+todo.txt

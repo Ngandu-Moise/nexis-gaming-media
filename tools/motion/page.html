@@ -1,144 +1,141 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
+<!-- Gabarit d'animation Nexis Gaming. Piloté par window.setup(spec, timeline) puis window.setFrame(n).
+     Le fond est transparent : les scènes avec "clip" sont superposées à la vidéo IA par ffmpeg. -->
 <style>
-@font-face{font-family:IB;src:url(file:///usr/share/fonts/opentype/inter/InterDisplay-Black.otf)}
-@font-face{font-family:IBo;src:url(file:///usr/share/fonts/opentype/inter/InterDisplay-Bold.otf)}
-@font-face{font-family:IS;src:url(file:///usr/share/fonts/opentype/inter/Inter-SemiBold.otf)}
+@font-face{font-family:IB;src:url(fonts/InterDisplay-Black.otf)}
+@font-face{font-family:IBo;src:url(fonts/InterDisplay-Bold.otf)}
+@font-face{font-family:IS;src:url(fonts/Inter-SemiBold.otf)}
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1920px;overflow:hidden;background:#0a0a12;color:#f5f5fa;font-family:IS}
-#bg{position:absolute;inset:0;overflow:hidden}
+html,body{width:1080px;height:1920px;overflow:hidden;background:transparent;color:#f5f5fa;font-family:IS}
+#bg{position:absolute;inset:0;overflow:hidden;background:#0a0a12}
 .glow{position:absolute;border-radius:50%;filter:blur(160px);opacity:.75}
 #g1{width:1000px;height:1000px;background:#006a8a}
 #g2{width:1100px;height:1100px;background:#8a0a50}
 #grid{position:absolute;left:-200px;right:-200px;bottom:-200px;height:1300px;
   background-image:linear-gradient(#1c1c38 3px,transparent 3px),linear-gradient(90deg,#1c1c38 3px,transparent 3px);
-  background-size:120px 120px;transform-origin:50% 0;opacity:.9;
-  mask-image:linear-gradient(to bottom,transparent,#000 40%)}
+  background-size:120px 120px;transform-origin:50% 0;opacity:.9;transform:perspective(700px) rotateX(58deg);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 40%)}
+#scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,6,12,.55) 0,rgba(6,6,12,0) 22%,rgba(6,6,12,0) 42%,rgba(6,6,12,.88) 72%,rgba(6,6,12,.95) 100%);opacity:0}
 #bar{position:absolute;top:0;left:0;right:0;height:150px;background:#06060c;border-bottom:4px solid #00e5ff;
   font-family:IB;font-size:56px;padding:44px 70px;letter-spacing:1px;z-index:5}
 #bar b{color:#00e5ff;font-weight:normal}
-.scene{position:absolute;left:80px;right:80px;top:380px;bottom:300px;opacity:0}
-.pill{display:inline-block;background:#ff2e88;font-family:IBo;font-size:52px;padding:14px 28px;border-radius:20px;text-transform:uppercase}
-.t{font-family:IB;line-height:1.05}
-.cy{color:#00e5ff}.pk{color:#ff2e88}.gr{color:#aaacbe}
+.scene{position:absolute;left:80px;right:80px;top:380px;opacity:0}
+.scene.over{top:auto;bottom:330px}
+.pill{display:inline-block;background:#ff2e88;font-family:IBo;font-size:52px;padding:14px 28px;border-radius:20px;text-transform:uppercase;margin-bottom:40px}
+.big{font-family:IB;font-size:400px;line-height:1;letter-spacing:-12px;transform-origin:0 50%;text-shadow:0 0 60px rgba(0,229,255,.5)}
+.title{font-family:IB;font-size:118px;line-height:1.05}
+.title span{display:block}
+.over .title{text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.body{font-family:IS;font-size:58px;line-height:1.3;color:#c4c6d6;margin-top:36px}
+.body.pk{font-family:IB;color:#ff2e88;font-size:84px;line-height:1.1;margin-top:60px}
+.cy{color:#00e5ff}
+.item{display:flex;align-items:center;gap:34px;font-family:IBo;font-size:64px;margin-top:40px}
+.box{flex:none;width:92px;height:92px;border-radius:22px;border:5px solid #00e5ff;display:flex;align-items:center;justify-content:center;font-family:IB;font-size:64px;color:transparent}
+.cross{display:inline-block;position:relative;font-family:IB;font-size:80px;color:#8a8ca4;margin:50px 44px 0 0}
+.cross s{position:absolute;left:-10px;top:50%;height:7px;width:0;background:#ff2e88;border-radius:4px}
 #prog{position:absolute;left:80px;right:80px;bottom:128px;height:12px;display:flex;gap:12px;z-index:5}
-#prog div{flex:1;border-radius:6px;background:#28283c;overflow:hidden}
+#prog div{flex:1;border-radius:6px;background:rgba(60,60,90,.8);overflow:hidden}
 #prog div i{display:block;height:100%;background:#00e5ff;width:0}
-.card{display:flex;align-items:center;gap:36px;background:rgba(255,255,255,.06);border:3px solid #00e5ff;border-radius:28px;padding:34px 40px;margin-top:34px}
-.card .ic{width:96px;height:96px;border-radius:50%;background:#00e5ff;color:#0a0a12;font-family:IB;font-size:64px;display:flex;align-items:center;justify-content:center}
-.no{display:inline-block;position:relative;font-family:IB;font-size:84px;color:#8a8ca4;margin-right:44px}
-.no s{position:absolute;left:-10px;top:50%;height:7px;background:#ff2e88;border-radius:5px;text-decoration:none}
-.item{display:flex;align-items:center;gap:34px;font-family:IBo;font-size:66px;margin-top:46px}
-.box{flex:none;width:92px;height:92px;border-radius:22px;border:5px solid #00e5ff;display:flex;align-items:center;justify-content:center;font-family:IB;font-size:64px;color:#0a0a12}
+#cta{top:470px}
+#cta .w{font-family:IB;font-size:190px;line-height:1.05;display:flex}
+#cta .w span{display:inline-block}
 </style></head><body>
 <div id="bg"><div id="g1" class="glow"></div><div id="g2" class="glow"></div><div id="grid"></div></div>
+<div id="scrim"></div>
 <div id="bar">NEXIS <b>GAMING</b></div>
-
-<div class="scene" id="s0">
-  <span class="pill" id="s0k">Compte à rebours</span>
-  <div class="t" id="s0n" style="font-size:430px;margin-top:40px;letter-spacing:-12px">J-18</div>
-  <div class="t" id="s0a" style="font-size:96px;margin-top:10px">GTA 6 sort le</div>
-  <div class="t cy" id="s0b" style="font-size:132px">19 NOVEMBRE</div>
-  <div class="t pk" id="s0c" style="font-size:84px;margin-top:70px">Ta console est prête&nbsp;?</div>
-</div>
-
-<div class="scene" id="s1">
-  <span class="pill" id="s1k">Attention</span>
-  <div class="t" id="s1t" style="font-size:110px;margin-top:50px">Uniquement sur</div>
-  <div class="card" id="s1c1"><div class="ic">✓</div><div class="t" style="font-size:110px">PS5</div></div>
-  <div class="card" id="s1c2"><div class="ic">✓</div><div class="t" style="font-size:84px">Xbox Series X|S</div></div>
-  <div style="margin-top:90px" id="s1n">
-    <span class="no" id="n0">PS4<s></s></span><span class="no" id="n1">Xbox One<s></s></span><span class="no" id="n2">PC<s></s></span>
-  </div>
-  <div class="gr" id="s1f" style="font-size:52px;margin-top:20px">PC : pas de version au lancement</div>
-</div>
-
-<div class="scene" id="s2">
-  <span class="pill" id="s2k">Avant le jour J</span>
-  <div class="t" id="s2t" style="font-size:118px;margin-top:50px">Prépare ta <span class="cy">console</span></div>
-  <div class="item" id="i0"><div class="box">✓</div>Mets-la à jour</div>
-  <div class="item" id="i1"><div class="box">✓</div>Libère de la place</div>
-  <div class="item" id="i2"><div class="box">✓</div>Charge tes manettes</div>
-  <div class="item pk" id="i3" style="margin-top:80px;font-size:62px"><div class="box" style="border-color:#ff2e88">?</div>Un souci ? On s'en occupe.</div>
-</div>
-
-<div class="scene" id="s3" style="top:470px">
-  <div class="t" style="font-size:190px;display:flex" id="w1"></div>
-  <div class="t cy" style="font-size:190px;display:flex;margin-top:-10px" id="w2"></div>
-  <div style="font-family:IBo;font-size:56px;margin-top:40px" id="s3s">Consoles · Jeux · Réparation</div>
-  <div class="gr" style="font-size:52px;margin-top:60px;line-height:1.4" id="s3a">Av. du 30 Juin, face à Netflix<br>Rond-point Malu · Kolwezi</div>
-  <div style="margin-top:70px" id="s3h"><span class="pill" style="text-transform:none;font-size:60px;padding:22px 36px;border-radius:26px">@nexisgs · Écris-nous en DM</span></div>
-</div>
-
-<div id="prog"><div><i></i></div><div><i></i></div><div><i></i></div><div><i></i></div></div>
-
+<div id="stage"></div>
+<div id="prog"></div>
 <script>
-const FPS=30;
-const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
-const lerp=(a,b,t)=>a+(b-a)*t;
-const eo=t=>1-Math.pow(1-clamp(t),3);
-const back=t=>{t=clamp(t);const c=1.9;return 1+(c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2)};
-// apparition d'un élément : t0 en secondes (local), slide vertical + fondu
-function inn(el,lt,t0,dy=70,d=.45){const p=back((lt-t0)/d);const o=eo((lt-t0)/(d*.7));
-  el.style.opacity=o;el.style.transform=`translateY(${(1-p)*dy}px)`;}
-const W1="NEXIS",W2="GAMING";
-document.getElementById('w1').innerHTML=[...W1].map(c=>`<span>${c}</span>`).join('');
-document.getElementById('w2').innerHTML=[...W2].map(c=>`<span>${c}</span>`).join('');
-let T=null; // timeline : [{start,dur}] en secondes
-window.setTimeline=t=>{T=t};
-const $=id=>document.getElementById(id);
-window.setFrame=f=>{
-  const t=f/FPS, beat=(t%0.5)/0.5;
-  // fond animé
-  $('g1').style.transform=`translate(${-300+Math.sin(t*.5)*120}px,${-200+Math.cos(t*.4)*100}px)`;
-  $('g2').style.transform=`translate(${400+Math.cos(t*.45)*140}px,${1200+Math.sin(t*.35)*120}px)`;
-  $('grid').style.transform=`perspective(700px) rotateX(58deg)`;
-  $('grid').style.backgroundPosition=`0 ${(t*90)%120}px`;
-  const total=T[T.length-1].start+T[T.length-1].dur;
-  T.forEach((s,i)=>{
-    const el=$('s'+i), lt=t-s.start;
-    const fin=eo(lt/.3), fout=eo((s.dur-lt)/.3);
-    const vis=lt>=0&&lt<s.dur;
-    el.style.opacity=vis?Math.min(fin,fout):0;
-    el.style.transform=vis?`translateX(${(1-fin)*120-(1-fout)*120}px)`:'';
-    const bar=document.querySelectorAll('#prog i')[i];
-    bar.style.width=(clamp(lt/s.dur)*100)+'%';
-    if(!vis) return;
-    const D=s.dur;
-    if(i===0){
-      inn($('s0k'),lt,.05);
-      const p=eo((lt-.1)/.5), n=$('s0n');
-      const pulse=lt>.6?1+0.04*Math.exp(-beat*6):1;
-      n.style.opacity=p;n.style.filter=`blur(${(1-p)*30}px)`;
-      n.style.transform=`scale(${lerp(1.7,1,p)*pulse})`;n.style.transformOrigin='0 50%';
-      n.style.textShadow=`0 0 ${40+60*Math.exp(-beat*5)}px rgba(0,229,255,.55)`;
-      inn($('s0a'),lt,.55);inn($('s0b'),lt,.75);inn($('s0c'),lt,Math.min(1.6,D*.45));
+const FPS = 30;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const eo = t => 1 - Math.pow(1 - clamp(t), 3);
+const back = t => { t = clamp(t); const c = 1.9; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); };
+const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+// apparition : glissé + fondu
+function inn(el, lt, t0, dx = 0, dy = 70, d = .45) {
+  if (!el) return;
+  const p = back((lt - t0) / d);
+  el.style.opacity = eo((lt - t0) / (d * .7));
+  el.style.transform = `translate(${(1 - p) * dx}px,${(1 - p) * dy}px)`;
+}
+// réduit la police jusqu'à ce que le bloc tienne dans maxH
+function fit(el, maxH, min = 56) {
+  let s = parseFloat(getComputedStyle(el).fontSize);
+  while (el.scrollHeight > maxH && s > min) { s -= 4; el.style.fontSize = s + 'px'; }
+}
+let S = null, T = null;
+window.setup = (spec, timeline) => {
+  S = spec; T = timeline;
+  const stage = document.getElementById('stage'), prog = document.getElementById('prog');
+  prog.innerHTML = T.map(() => '<div><i></i></div>').join('');
+  stage.innerHTML = S.scenes.map((sc, i) => {
+    const lines = String(sc.title || '').split('\n');
+    const title = lines.map((l, k) => `<span class="${sc.accent_last && k === lines.length - 1 ? 'cy' : ''}">${esc(l)}</span>`).join('');
+    let h = `<div class="scene${sc.clip ? ' over' : ''}" id="s${i}">`;
+    if (sc.kicker) h += `<span class="pill k">${esc(sc.kicker)}</span>`;
+    if (sc.big) h += `<div class="big">${esc(sc.big)}</div>`;
+    if (sc.title) h += `<div class="title">${title}</div>`;
+    (sc.items || []).forEach(it => h += `<div class="item"><div class="box">✓</div><div>${esc(it)}</div></div>`);
+    if ((sc.cross || []).length) h += '<div>' + sc.cross.map(c => `<span class="cross">${esc(c)}<s></s></span>`).join('') + '</div>';
+    if (sc.body) h += `<div class="body${sc.big ? ' pk' : ''}">${esc(sc.body)}</div>`;
+    return h + '</div>';
+  }).join('') + (S.cta === false ? '' :
+    `<div class="scene" id="cta"><div class="w">${[...'NEXIS'].map(c => `<span>${c}</span>`).join('')}</div>
+     <div class="w cy" style="margin-top:-10px">${[...'GAMING'].map(c => `<span>${c}</span>`).join('')}</div>
+     <div class="c1" style="font-family:IBo;font-size:56px;margin-top:40px">Consoles · Jeux · Réparation</div>
+     <div class="c2" style="font-size:52px;margin-top:60px;line-height:1.4;color:#aaacbe">Av. du 30 Juin, face à Netflix<br>Rond-point Malu · Kolwezi</div>
+     <div class="c3" style="margin-top:70px"><span class="pill" style="text-transform:none;font-size:60px;padding:22px 36px;border-radius:26px;margin:0">@nexisgs · Écris-nous en DM</span></div></div>`);
+  document.querySelectorAll('.scene .title').forEach(el => fit(el, 520));
+  document.querySelectorAll('.scene .body').forEach(el => fit(el, 330, 44));
+};
+const $ = id => document.getElementById(id);
+window.setFrame = f => {
+  const t = f / FPS, beat = (t % 0.5) / 0.5;
+  let clipNow = false;
+  T.forEach((s, i) => {
+    const el = i < S.scenes.length ? $('s' + i) : $('cta');
+    const sc = S.scenes[i] || {};
+    const lt = t - s.start, D = s.dur, vis = lt >= 0 && lt < D;
+    const bar = document.querySelectorAll('#prog i')[i];
+    bar.style.width = (clamp(lt / D) * 100) + '%';
+    if (!vis) { el.style.opacity = 0; return; }
+    if (sc.clip) clipNow = true;
+    const fin = eo(lt / .3), fout = i === T.length - 1 ? 1 : eo((D - lt) / .3);
+    el.style.opacity = Math.min(fin, fout);
+    el.style.transform = `translateX(${(1 - fin) * 120 - (1 - fout) * 120}px)`;
+    if (el.id === 'cta') {
+      el.querySelectorAll('.w span').forEach((sp, k) => { const a = .05 + k * .06, p = back((lt - a) / .4);
+        sp.style.opacity = eo((lt - a) / .25); sp.style.transform = `translateY(${(1 - p) * 120}px) rotate(${(1 - p) * -12}deg)`; });
+      inn(el.querySelector('.c1'), lt, .8); inn(el.querySelector('.c2'), lt, 1.0);
+      const c3 = el.querySelector('.c3'); inn(c3, lt, 1.25);
+      if (lt > 1.8) { c3.style.transform = `scale(${1 + 0.035 * Math.sin((lt - 1.8) * Math.PI * 2)})`; c3.style.transformOrigin = '0 50%'; }
+      return;
     }
-    if(i===1){
-      inn($('s1k'),lt,.05);inn($('s1t'),lt,.2);
-      inn($('s1c1'),lt,D*.18,0);$('s1c1').style.transform=`translateX(${(1-back((lt-D*.18)/.45))*-500}px)`;
-      inn($('s1c2'),lt,D*.30,0);$('s1c2').style.transform=`translateX(${(1-back((lt-D*.30)/.45))*-500}px)`;
-      [0,1,2].forEach(k=>{const a=D*(.5+k*.1);inn($('n'+k),lt,a,40);
-        const sEl=$('n'+k).querySelector('s');sEl.style.width=`calc(${eo((lt-a-.25)/.3)*100}% + 20px)`;});
-      inn($('s1f'),lt,D*.78,30);
-    }
-    if(i===2){
-      inn($('s2k'),lt,.05);inn($('s2t'),lt,.2);
-      [0,1,2,3].forEach(k=>{const a=D*(.16+k*.19);const it=$('i'+k);inn(it,lt,a,0);
-        it.style.transform=`translateX(${(1-back((lt-a)/.45))*300}px)`;
-        const box=it.querySelector('.box');const c=clamp((lt-a-.3)/.15);
-        if(k<3){box.style.background=c>0?'#00e5ff':'transparent';box.style.color=c>0?'#0a0a12':'transparent';
-          box.style.transform=`scale(${c>0?1+0.25*(1-c):1})`;}
-        else{box.style.color='#ff2e88';}});
-    }
-    if(i===3){
-      document.querySelectorAll('#w1 span,#w2 span').forEach((sp,k)=>{const a=.05+k*.06;
-        const p=back((lt-a)/.4);sp.style.display='inline-block';sp.style.opacity=eo((lt-a)/.25);
-        sp.style.transform=`translateY(${(1-p)*120}px) rotate(${(1-p)*-12}deg)`;});
-      inn($('s3s'),lt,.8);inn($('s3a'),lt,1.0);
-      const h=$('s3h');inn(h,lt,1.25);
-      if(lt>1.8) h.style.transform=`scale(${1+0.035*Math.sin((lt-1.8)*Math.PI*2)})`,h.style.transformOrigin='0 50%';
-    }
+    let at = .05;
+    inn(el.querySelector('.k'), lt, at); at += .1;
+    const big = el.querySelector('.big');
+    if (big) { const p = eo((lt - .1) / .5), pulse = lt > .6 ? 1 + 0.04 * Math.exp(-beat * 6) : 1;
+      big.style.opacity = p; big.style.filter = `blur(${(1 - p) * 30}px)`;
+      big.style.transform = `scale(${(1.7 - .7 * p) * pulse})`; at += .45; }
+    el.querySelectorAll('.title span').forEach(sp => { inn(sp, lt, at); at += .15; });
+    const items = el.querySelectorAll('.item'), crosses = el.querySelectorAll('.cross');
+    const n = items.length + crosses.length + (el.querySelector('.body') ? 1 : 0);
+    const step = n ? Math.min(1.2, (D * .8 - at) / n) : 0;
+    const body = el.querySelector('.body');
+    if (body && !items.length && !crosses.length) inn(body, lt, Math.min(at + .2, D * .45));
+    items.forEach((it, k) => { const a = at + k * step; inn(it, lt, a, 300, 0);
+      const box = it.querySelector('.box'), c = clamp((lt - a - .3) / .15);
+      box.style.background = c > 0 ? '#00e5ff' : 'transparent'; box.style.color = c > 0 ? '#0a0a12' : 'transparent';
+      box.style.transform = `scale(${c > 0 ? 1 + .25 * (1 - c) : 1})`; });
+    crosses.forEach((c, k) => { const a = at + (items.length + k) * step; inn(c, lt, a, 0, 40);
+      c.querySelector('s').style.width = `calc(${eo((lt - a - .25) / .3) * 100}% + 20px)`; });
+    if (body && (items.length || crosses.length)) inn(body, lt, at + (n - 1) * step, 0, 30);
   });
+  $('bg').style.opacity = clipNow ? 0 : 1;
+  $('scrim').style.opacity = clipNow ? 1 : 0;
+  $('g1').style.transform = `translate(${-300 + Math.sin(t * .5) * 120}px,${-200 + Math.cos(t * .4) * 100}px)`;
+  $('g2').style.transform = `translate(${400 + Math.cos(t * .45) * 140}px,${1200 + Math.sin(t * .35) * 120}px)`;
+  $('grid').style.backgroundPosition = `0 ${(t * 90) % 120}px`;
 };
 </script></body></html>

@@ -1,0 +1,71 @@
+# Monte automatiquement les vidéos "motion" (clips IA Higgsfield + textes animés + voix off).
+# Déclenché par le push d'un fichier specs/*.json dont "engine" vaut "motion",
+# ou à la main (onglet Actions > Rendu vidéo > Run workflow) avec le chemin du spec.
+name: Rendu vidéo
+on:
+  push:
+    branches: [main]
+    paths: ['specs/**.json']
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: 'Chemin du spec, ex. specs/2026-11-03.json'
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: rendu-video
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Specs à monter
+        id: todo
+        env:
+          SPEC_INPUT: ${{ inputs.spec }}
+        run: |
+          if [ -n "$SPEC_INPUT" ]; then echo "$SPEC_INPUT" > changed.txt
+          else git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'specs/*.json' > changed.txt; fi
+          python3 - <<'PY'
+          import json, os
+          todo = [p.strip() for p in open("changed.txt") if p.strip()]
+          todo = [p for p in todo if os.path.exists(p) and json.load(open(p)).get("engine") == "motion"]
+          open("todo.txt", "w").write("\n".join(todo))
+          open(os.environ["GITHUB_OUTPUT"], "a").write(f"count={len(todo)}\n")
+          print("à monter :", todo)
+          PY
+      - uses: actions/setup-python@v5
+        if: steps.todo.outputs.count != '0'
+        with:
+          python-version: '3.12'
+      - name: Outils (ffmpeg, Chromium, voix)
+        if: steps.todo.outputs.count != '0'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q pillow
+          npm install --no-save --no-package-lock playwright@1.49.1
+          npx playwright install --with-deps chromium
+          bash tools/setup.sh
+      - name: Montage
+        if: steps.todo.outputs.count != '0'
+        run: |
+          export NODE_PATH="$PWD/node_modules"
+          while read -r spec; do
+            [ -z "$spec" ] && continue
+            out="videos/$(basename "$spec" .json).mp4"
+            python3 tools/motion/make_video.py "$spec" "$out"
+          done < todo.txt
+      - name: Publication dans le dépôt
+        if: steps.todo.outputs.count != '0'
+        run: |
+          git config user.name "Nexis Gaming Bot"
+          git config user.email "moiseboa13@gmail.com"
+          git add videos/*.mp4
+          git commit -m "Vidéo montée par GitHub Actions : $(tr '\n' ' ' < todo.txt)" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1
