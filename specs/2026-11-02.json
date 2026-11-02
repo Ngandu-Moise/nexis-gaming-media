@@ -1,0 +1,39 @@
+{
+ "engine": "motion",
+ "scenes": [
+  {
+   "kicker": "Déballage",
+   "title": "Ce qu'il y a VRAIMENT\ndans la boîte de la PS5",
+   "accent_last": true,
+   "voice": "Tu achètes une PS5 ? Regarde ce qu'il y a vraiment dans la boîte !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261102_070848_d6b027d1-8fc7-4a16-8e0d-bc57f6ae0d46.mp3"
+  },
+  {
+   "kicker": "Dans la boîte",
+   "title": "6 éléments",
+   "items": ["La console PS5", "1 manette DualSense", "Câble HDMI", "Câble d'alimentation", "Câble USB (manette)", "2 pieds pour la poser à plat"],
+   "voice": "Dedans : la console, une manette DualSense, un câble HDMI, le câble d'alimentation, un câble USB pour la manette, et deux petits pieds pour la poser à plat.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261102_070848_1e0fe49e-b6a8-4f68-aa11-0bf44e2529b3.mp3"
+  },
+  {
+   "kicker": "Attention",
+   "title": "PS5 Slim : le support\nvertical n'est pas inclus",
+   "accent_last": true,
+   "body": "Pour la mettre debout, le support est vendu à part.",
+   "voice": "Attention ! Sur la PS5 Slim, le support pour la mettre debout n'est pas dans la boîte. Il est vendu à part.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261102_070858_4d2b72cb-41dd-4061-84db-baef807ab52d.mp3"
+  },
+  {
+   "kicker": "GTA 6 dans",
+   "big": "J-17",
+   "title": "On t'aide à tout\nbrancher et régler",
+   "accent_last": true,
+   "body": "Installation et réglages chez Nexis Gaming.",
+   "voice": "GTA 6 sort dans dix-sept jours. On t'aide à tout brancher et à tout régler !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261102_070848_a557a55c-d47a-4be3-85dd-a6f9f328f1e4.mp3"
+  }
+ ],
+ "cta": true,
+ "cta_voice": "Nexis Gaming, avenue du 30 juin, face à Netflix, à Kolwezi. Écris-nous en privé !",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261102_070848_33059ccd-feb0-46cf-b631-808b7e59382e.mp3"
+}
