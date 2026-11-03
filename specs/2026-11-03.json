@@ -1,0 +1,42 @@
+{
+ "engine": "motion",
+ "scenes": [
+  {
+   "kicker": "Attention",
+   "title": "Ta console fait\nun bruit d'avion ?",
+   "accent_last": true,
+   "voice": "Ta console fait un bruit d'avion ? Attention, elle surchauffe !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261103_070941_10644397-8faf-4fe6-9b5c-dd67fb7fbc0a.mp3"
+  },
+  {
+   "kicker": "Cause n°1",
+   "title": "La poussière",
+   "accent_last": true,
+   "body": "Aérations bouchées = console qui chauffe.",
+   "voice": "La cause numéro un, c'est la poussière qui bouche les aérations.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261103_070933_d3a318f6-5975-4f51-8d44-e3463bd85ed4.mp3"
+  },
+  {
+   "kicker": "3 gestes simples",
+   "title": "À faire chez toi",
+   "items": [
+    "10 cm d'espace autour",
+    "Jamais dans un meuble fermé",
+    "Dépoussière les grilles, console débranchée"
+   ],
+   "voice": "Laisse de l'espace autour, pas de meuble fermé, et dépoussière les grilles, console débranchée.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261103_070933_2b5af724-60de-43c0-abd3-830b4760c4f7.mp3"
+  },
+  {
+   "kicker": "Ça chauffe encore ?",
+   "title": "Nettoyage et\nréparation",
+   "accent_last": true,
+   "body": "Chez Nexis Gaming, à Kolwezi.",
+   "voice": "Ça chauffe encore ? Nettoyage et réparation chez Nexis Gaming !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261103_070933_a614aafb-4963-40b3-ae6d-3cf0191ad477.mp3"
+  }
+ ],
+ "cta": true,
+ "cta_voice": "Nexis Gaming, face à Netflix, à Kolwezi. Écris-nous !",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261103_070945_b21bda24-1e2c-4334-9752-42b8191693d3.mp3"
+}
