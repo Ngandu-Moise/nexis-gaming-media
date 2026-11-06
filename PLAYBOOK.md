@@ -21,10 +21,14 @@ Plan détaillé et calculs : https://claude.ai/artifact/MSnUWa3NpyenDBpPeLwz1t
 - **Une vidéo de haute qualité tous les 2 jours** : jours de publication = 3, 5, 7… novembre,
   en comptant sans interruption d'un mois à l'autre (29 nov. → 1er déc. → 3 déc. … 31 déc. → 2 janv.).
   Test : `python3 -c "import datetime as d;print((d.date.today()-d.date(2026,11,3)).days%2==0)"` → True = jour de publication.
-- Heure : 18 h en semaine, 12 h le samedi et le dimanche (heure de Kolwezi).
-- Le 2 novembre 2026 seulement : vidéo motion design sans clip IA (abonnement pas encore actif),
-  avec la voix ElevenLabs (≈ 2 crédits sur le solde gratuit restant).
-- Jour sans publication : ne rien créer. Vérifier seulement que la publication de la veille est
+- Heure (heure de Kolwezi) : **18 h du lundi au vendredi**, **10 h le samedi et le dimanche**,
+  **10 h le jour d'un grand événement** (ex. sortie de GTA 6 le 19 nov.). Source : meilleur moment
+  Metricool TikTok (pics à 10 h et 18 h) ; à réévaluer au bilan du dimanche avec nos propres vues.
+- **Vidéo de vidage** : le dernier jour du cycle (le 2 du mois), s'il reste ≥ 28,25 crédits après
+  la dernière vidéo, publier une vidéo bonus à 18 h (10 h le week-end) pour ne perdre aucun crédit
+  (voir « Budget »). Si le 2 est déjà un jour de publication, c'est lui la dernière vidéo et elle
+  prend tout le reste.
+- Jour sans publication (sauf vidéo de vidage du 2) : ne rien créer. Vérifier seulement que la publication de la veille est
   bien partie (getScheduledPosts) et le solde Higgsfield (balance). Signaler un problème, sinon rien.
 
 ## Sujets : les formats les plus populaires du gaming
@@ -57,7 +61,7 @@ sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vid�
 
 ## Règles de contenu
 
-- Vidéo verticale 1080x1920, 22 à 28 secondes, voix off française sur chaque scène.
+- Vidéo verticale 1080x1920, 24 à 32 secondes, voix off française sur chaque scène.
 - Scène 1 = accroche en moins de 2 s (question, chiffre, « attention », réaction forte).
 - Ton : jeune, direct, tutoiement, français simple. Pas de vulgarité, pas de politique.
 - Prix et disponibilités : UNIQUEMENT ceux de `produits.md`. Liste vide ou produit absent
@@ -69,14 +73,20 @@ sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vid�
 
 ## Format d'une vidéo (moteur « motion »)
 
+Format standard « premium » (niveau N2, voir « Budget ») :
+
 | Scène | Durée | Contenu | Source | Crédits |
 | --- | --- | --- | --- | --- |
 | 1 Accroche | ~5 s | clip IA + titre | Kling 3.0 | 8,75 |
 | 2 Contenu | ~5 s | clip IA + texte | Kling 3.0 | 8,75 |
 | 3 Contenu | ~5 s | clip IA + texte | Kling 3.0 | 8,75 |
-| 4 Info clé | 4–6 s | liste, gros chiffre, comparatif sur fond animé | motion | 0 |
+| 4 Contenu | ~5 s | clip IA + texte | Kling 3.0 | 8,75 |
+| 5 Info clé | 4–6 s | liste, gros chiffre, comparatif sur fond animé | motion | 0 |
 | Fin | ~5 s | NEXIS GAMING + adresse (automatique) | motion | 0 |
 | Voix off | toute la vidéo | voix naturelle ElevenLabs, une piste par scène + fin | Higgsfield | ≈ 2 |
+
+Niveaux supérieurs : N3 = la scène 5 devient aussi un clip IA (texte de l'info clé en bas) ;
+N4 = N3 + accroche de 10 s (clip de 10 s, 17,5 au lieu de 8,75). Niveau inférieur N1 = 3 clips.
 
 Spec `specs/AAAA-MM-JJ.json` (voir l'en-tête de `tools/motion/make_video.py`) :
 `{"engine": "motion", "scenes": [{"kicker", "title" ("\n" = nouvelle ligne), "accent_last", "body",
@@ -98,9 +108,9 @@ Voix : 1 ou 2 phrases courtes par scène ; "voice" garde le texte, "voice_url" l
 
 ### Clips Higgsfield
 
-- generate_video_batch, 3 requêtes : model `kling3_0`, aspect_ratio `9:16`, duration 5,
-  mode `pro`, sound `off`, use_unlim false. Avant : generate_video avec get_cost true pour
-  vérifier le prix (8,75 attendu) et balance pour le solde. Puis jobs_wait jusqu'à la fin.
+- generate_video_batch, une requête par clip du niveau choisi (N1 = 3, N2 = 4, N3/N4 = 5) : model `kling3_0`, aspect_ratio `9:16`, duration 5,
+  mode `pro`, sound `off`, use_unlim false (accroche N4 : duration 10). Avant : generate_video avec
+  get_cost true pour vérifier le prix (8,75 pour 5 s, 17,5 pour 10 s) et balance pour le solde. Puis jobs_wait jusqu'à la fin.
 - Style commun des prompts (en anglais) : vertical cinematic shot, night, small modern video game
   shop or gamer bedroom lit by cyan and magenta neon, young Black African people in casual
   streetwear (fictional), plain black consoles/controllers with no logos, screens showing only
@@ -120,21 +130,65 @@ Voix : 1 ou 2 phrases courtes par scène ; "voice" garde le texte, "voice_url" l
   retirer le "clip" de cette scène (fond animé). La vidéo sort quand même.
 - Sans abonnement ou en cas de panne Higgsfield : vidéo sans clip (0 crédit), le noter.
 
-## Budget de crédits (600 par cycle, du 3 au 2 du mois suivant)
+## Budget de crédits : zéro crédit perdu (600 par cycle, du 3 au 2 du mois suivant)
 
-- Coût de base d'une vidéo : 3 clips (26,25) + voix (≈ 2) = **≈ 28,25 crédits**.
-  Cycle de 15 vidéos : ≈ 424 crédits ; il reste ≈ 176 crédits pour les reprises et la fin de cycle.
-- Les crédits non utilisés ne sont pas reportés : ils sont dépensés sur les **3 dernières vidéos
-  du cycle** (pour le premier cycle : 27 nov., 29 nov. et 1er déc.).
-- Avant de générer, compter V = vidéos restantes jusqu'au 2 inclus (jours de publication restants).
-  - V > 3 : besoin = V × 28,25. Solde ≥ besoin → 3 clips. Solde < besoin → 2 clips.
-    Solde < 10 → aucun clip (voix seule si possible).
-  - V ≤ 3 (fin de cycle) : budget de la vidéo = (solde − 9) / V, où 9 crédits restent pour
-    une reprise. Avec ce budget, ajouter dans l'ordre : 4e clip, 5e clip (vidéo entièrement IA),
-    puis clip d'accroche en 10 s (17,5 au lieu de 8,75). Pour la toute dernière vidéo (V = 1),
-    budget = solde, une fois la reprise éventuelle faite.
-- Solde < 100 crédits avant le 20 du cycle → notification au propriétaire.
-- Ne jamais acheter de crédits ni changer d'abonnement.
+Objectif : finir chaque cycle avec **moins de 1 crédit** non utilisé. Les crédits ne sont pas reportés.
+Prix vérifiés le 6 nov. 2026 : clip Kling 3.0 5 s = 8,75 ; 10 s = 17,5 ; image gpt_image_2_6 = 0,25 ;
+voix ElevenLabs ≈ 2 par vidéo.
+
+| Niveau | Contenu | Crédits |
+| --- | --- | --- |
+| N1 | 3 clips + voix | 28,25 |
+| N2 premium (standard) | 4 clips + voix | 37 |
+| N3 tout IA | 5 clips + voix | 45,75 |
+| N4 événement | accroche 10 s + 4 clips + voix | 54,5 |
+| Reprise | 1 clip refait | 8,75 |
+
+### Règle de calcul (chaque jour de publication, avant de générer)
+
+1. S = solde (balance). V = vidéos restantes dans le cycle, celle du jour comprise
+   (jours de publication jusqu'au 2 inclus, sans compter la vidéo de vidage).
+2. Si V > 1 : budget du jour B = (S − 8,75) / V (8,75 = une reprise gardée en réserve).
+   Choisir le niveau le plus élevé dont le coût ≤ B. Exception : un jour d'événement prévu au
+   programme peut prendre N4 si S reste ≥ la cible du tableau ci-dessous moins 20.
+3. Si V = 1 (dernière vidéo du cycle) : faire les reprises éventuelles, puis dépenser au niveau N4.
+   Ensuite, si le reste ≥ 28,25 → vidéo de vidage le 2 du mois avec tout le reste (N1 à N4,
+   + clips en plus, jusqu'à 6 clips / 35 s). Si 8,75 ≤ reste < 28,25 → ajouter des clips à la
+   dernière vidéo. Reste < 8,75 → images de fond (0,25 l'une) pour les scènes « info » des vidéos
+   suivantes (URL notées dans `journal.md`), jusqu'à reste < 0,5.
+4. Comparer S après génération à la cible : écart > +20 → monter d'un niveau à la vidéo suivante ;
+   écart < −20 → descendre d'un niveau et notifier le propriétaire.
+5. Solde < 10 → aucun clip (voix seule si possible). Ne jamais acheter de crédits ni changer
+   d'abonnement.
+
+### Plan du cycle 3 nov. → 2 déc. 2026 (solde 604,45 le 6 nov.)
+
+| Date | Vidéo | Niveau | Crédits | Solde cible après |
+| --- | --- | --- | --- | --- |
+| 7 nov. (sam.) | Devine le jeu en 3 indices | N2 | 37 | 567,45 |
+| 9 nov. (lun.) | Déballage manette sans fil | N2 | 37 | 530,45 |
+| 11 nov. (mer.) | GTA 6 J-8 : ce qui est confirmé | N2 | 37 | 493,45 |
+| 13 nov. (ven.) | Humour : coupure de courant en pleine mission | N2 | 37 | 456,45 |
+| 15 nov. (dim.) | Prépare ta console pour GTA 6 en 4 étapes | N2 | 37 | 419,45 |
+| 17 nov. (mar.) | Manette qui dérive : répare-la avant GTA 6 | N2 | 37 | 382,45 |
+| 19 nov. (jeu.) | GTA 6 est sorti aujourd'hui (10 h) | N4 | 54,5 | 327,95 |
+| 21 nov. (sam.) | sujet choisi au bilan du 15 | N3 | 45,75 | 282,20 |
+| 23 nov. (lun.) | idem | N3 | 45,75 | 236,45 |
+| 25 nov. (mer.) | idem | N3 | 45,75 | 190,70 |
+| 27 nov. (ven.) | idem | N3 | 45,75 | 144,95 |
+| 29 nov. (dim.) | idem | N3 | 45,75 | 99,20 |
+| 1er déc. (mar.) | dernière vidéo du cycle | N4 | 54,5 | 44,70 |
+| 2 déc. (mer.) | vidéo de vidage (reprises non utilisées) | selon reste | ≈ 44,70 | ≈ 0 |
+
+Les 44,70 restant au 1er déc. = 4 reprises possibles (35) + 9,70. Chaque reprise faite réduit d'autant
+la vidéo de vidage. Cycles suivants : refaire ce tableau au premier bilan du cycle avec la même règle.
+
+## Programme du 7 au 20 novembre 2026
+
+Détail (accroches, clips, légendes, plan B) : https://claude.ai/artifact/XbungjxD5QHa1WFoUB3hqD
+Fil rouge : compte à rebours GTA 6. Sujets et niveaux : tableau « Plan du cycle » ci-dessus.
+Chaque fait sur un jeu est revérifié le jour même ; le préchargement GTA 6 (annoncé au 12 nov. par
+la presse) et la taille du jeu ne sont cités que s'ils sont officiels.
 
 ## Publication Metricool
 
