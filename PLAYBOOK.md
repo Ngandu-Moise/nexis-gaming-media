@@ -39,23 +39,28 @@ sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vid�
 
 | Jour | Pilier | Exemples |
 | --- | --- | --- |
-| Lundi | Déballage (console, manette, accessoire) | « On ouvre la manette sans fil », « ce qu'il y a dans la boîte » |
-| Mardi | Réparation et entretien | manette qui dérive, surchauffe, port HDMI, nettoyage |
-| Mercredi | Jeux phares : actu vérifiée | GTA 6, EA Sports FC, Call of Duty, Fortnite : sortie, mise à jour, nouveauté |
-| Jeudi | Déballage ou comparatif | PS5 ou Xbox Series ? quelle manette choisir ? |
+| Lundi | Histoire d'un jeu légendaire | la saga GTA de 1997 à GTA 6, FIFA devenu EA Sports FC, Mario, Call of Duty, Mortal Kombat : dates clés, chiffres de ventes vérifiés |
+| Mardi | Réparation PlayStation et manette | manette qui dérive, PS5 qui surchauffe, port HDMI, bouton qui ne répond plus, nettoyage |
+| Mercredi | Jeux phares : actu vérifiée et classements | GTA 6, EA Sports FC, Call of Duty ; « top 5 des meilleurs jeux de l'année » (notes Metacritic/OpenCritic, nommés et lauréats des Game Awards, vérifiés le jour même) |
+| Jeudi | Consoles : puissance et comparatifs (ou déballage) | « les consoles les plus puissantes » (téraflops, résolution, fps : fiches techniques officielles), PS5 Pro ou Xbox Series X ? quelle manette choisir ? |
 | Vendredi | Humour gaming | coupure de courant pendant le match, manette à 1 % de batterie, le pote qui met pause |
-| Samedi | Défi ou quiz | « devine le jeu », « commente ton score » |
+| Samedi | Quiz ou défi | « devine le jeu », « devine la console à son bruit », vrai ou faux gaming |
 | Dimanche | Astuces de jeu | réglages, astuces pour bien démarrer un jeu phare, gestion du stockage |
 
 - Jusqu'au 19 novembre 2026, les sujets « jeux phares » parlent en priorité de GTA 6 (sortie le
   19 novembre sur PS5 et Xbox Series X|S). Le 19 novembre : « GTA 6 est sorti aujourd'hui ».
 - Si les statistiques montrent qu'un pilier marche nettement mieux, il peut remplacer
   un autre jour pendant une semaine (le noter dans le bilan).
-- « Extraits de jeux phares » : jamais d'images réelles d'un jeu (droits d'auteur) ni de recréation
-  IA d'un jeu, d'un personnage ou d'un lieu protégé. On montre des joueurs fictifs qui réagissent,
-  l'écran ne montre que de la lumière colorée ; le texte et la voix nomment le jeu.
-- Déballage : la vidéo IA montre une console ou une manette générique sans logo. Ne jamais dire
-  que le produit est en stock ou citer un prix s'il n'est pas dans `produits.md`.
+- Noms : les jeux, consoles et marques (GTA 6, PS5, Xbox, EA Sports FC…) sont nommés librement
+  dans les titres, la voix, la légende et les hashtags (demande du propriétaire, 7 nov. 2026).
+- Images de produits réels (pochettes, boîtes, consoles et manettes officielles avec leur logo) :
+  uniquement via les vidéos et photos filmées par Nexis Gaming dans `rushes/` (produits de la
+  boutique). Les clips IA, eux, ne recréent jamais un logo, une pochette, une affiche, un personnage
+  ou un jeu : joueurs fictifs, consoles noires génériques, écrans en lumière colorée.
+- Classements et comparatifs : chaque rang, note ou chiffre technique vient d'une source vérifiée
+  le jour même (citée dans `journal.md`). Le titre du jeu ou le chiffre s'affiche en gros texte animé.
+- Déballage : sans rush, la vidéo IA montre une console ou une manette générique sans logo. Ne jamais
+  dire que le produit est en stock ou citer un prix s'il n'est pas dans `produits.md`.
 - Dossier `rushes/` : si Nexis Gaming y dépose de vraies vidéos (déballage, atelier, boutique),
   les utiliser en priorité comme clips (champ "clip" : "rushes/fichier.mp4"), sans crédit.
 
@@ -67,8 +72,9 @@ sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vid�
 - Prix et disponibilités : UNIQUEMENT ceux de `produits.md`. Liste vide ou produit absent
   = ne citer aucun prix ni stock. Ne jamais inventer de promotion, de prix ou de date.
 - Actualité : seulement des faits vérifiés par une recherche web le jour même.
-- Aucun logo, personnage, jeu ou visuel protégé (GTA, PlayStation, Xbox, FC…) dans les images ;
-  personnes fictives uniquement, aucune ressemblance avec une vraie personne.
+- Aucun logo, personnage, jeu ou visuel protégé généré par IA ni téléchargé sur le web ; les vrais
+  produits n'apparaissent que via les rushes de la boutique. Personnes fictives uniquement dans les
+  clips IA, aucune ressemblance avec une vraie personne.
 - Ne pas répéter un sujet publié dans les 10 derniers jours (voir `journal.md`).
 
 ## Format d'une vidéo (moteur « motion »)
@@ -166,18 +172,18 @@ voix ElevenLabs ≈ 2 par vidéo.
 | Date | Vidéo | Niveau | Crédits | Solde cible après |
 | --- | --- | --- | --- | --- |
 | 7 nov. (sam.) | Devine le jeu en 3 indices | N2 | 37 | 567,45 |
-| 9 nov. (lun.) | Déballage manette sans fil | N2 | 37 | 530,45 |
+| 9 nov. (lun.) | Histoire : la saga GTA, de 1997 à GTA 6 (J-10) | N2 | 37 | 530,45 |
 | 11 nov. (mer.) | GTA 6 J-8 : ce qui est confirmé | N2 | 37 | 493,45 |
 | 13 nov. (ven.) | Humour : coupure de courant en pleine mission | N2 | 37 | 456,45 |
 | 15 nov. (dim.) | Prépare ta console pour GTA 6 en 4 étapes | N2 | 37 | 419,45 |
 | 17 nov. (mar.) | Manette qui dérive : répare-la avant GTA 6 | N2 | 37 | 382,45 |
 | 19 nov. (jeu.) | GTA 6 est sorti aujourd'hui (10 h) | N4 | 54,5 | 327,95 |
-| 21 nov. (sam.) | sujet choisi au bilan du 15 | N3 | 45,75 | 282,20 |
-| 23 nov. (lun.) | idem | N3 | 45,75 | 236,45 |
-| 25 nov. (mer.) | idem | N3 | 45,75 | 190,70 |
-| 27 nov. (ven.) | idem | N3 | 45,75 | 144,95 |
-| 29 nov. (dim.) | idem | N3 | 45,75 | 99,20 |
-| 1er déc. (mar.) | dernière vidéo du cycle | N4 | 54,5 | 44,70 |
+| 21 nov. (sam.) | Quiz : vrai ou faux gaming | N3 | 45,75 | 282,20 |
+| 23 nov. (lun.) | Histoire d'un jeu légendaire (choisi au bilan du 22) | N3 | 45,75 | 236,45 |
+| 25 nov. (mer.) | Top 5 des meilleurs jeux de 2026 (sources vérifiées) | N3 | 45,75 | 190,70 |
+| 27 nov. (ven.) | Humour gaming | N3 | 45,75 | 144,95 |
+| 29 nov. (dim.) | Astuces : premiers réglages dans GTA 6 | N3 | 45,75 | 99,20 |
+| 1er déc. (mar.) | Réparation PS5 et manette (dernière vidéo du cycle) | N4 | 54,5 | 44,70 |
 | 2 déc. (mer.) | vidéo de vidage (reprises non utilisées) | selon reste | ≈ 44,70 | ≈ 0 |
 
 Les 44,70 restant au 1er déc. = 4 reprises possibles (35) + 9,70. Chaque reprise faite réduit d'autant
