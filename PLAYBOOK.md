@@ -64,6 +64,32 @@ sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vid�
 - Dossier `rushes/` : si Nexis Gaming y dépose de vraies vidéos (déballage, atelier, boutique),
   les utiliser en priorité comme clips (champ "clip" : "rushes/fichier.mp4"), sans crédit.
 
+## Ce qui marche dans le gaming court (étude du 7 nov. 2026)
+
+Sources : classements Buzzlytics, Heepsy et Hooked (comptes TikTok gaming les plus suivis et les plus vus),
+guides Socialync, Viryze et FluxNote (algorithme Shorts/TikTok 2026). Les plus gros comptes (Ibai, Ninja,
+Fortnite, Roblox, Subway Surfers) misent sur trois formats : « accroche + démonstration » (tuto, produit
+montré), sketch d'humour court, compilation de moments forts. Ce qu'on en applique :
+
+- **Accroche en 1,5 s** : une question ou une contradiction (« Ta PS5 chauffe ? Ce n'est pas la poussière. »),
+  un chiffre choc ou un classement (« Le n°1 va te surprendre »). Éviter les accroches « POV ». La 1re ligne
+  de la légende reprend l'accroche.
+- **Rythme** : jamais plus de 4 à 5 s sur le même plan ; une idée par scène ; pas d'introduction, pas de contexte inutile.
+- **Texte à l'écran** : chaque phrase dite apparaît en gros texte (la majorité regarde sans le son).
+- **Boucle** : la dernière phrase avant la fin renvoie à l'accroche (« Alors, t'avais trouvé ? »), pour
+  donner envie de revoir la vidéo.
+- **Durée** : 25 à 35 s. En dessous de 15 s, les Shorts sont moins poussés.
+- **Séries numérotées** reconnaissables dès la 1re image : « Devine le jeu #2 », « Légendes du jeu #1 »,
+  « Top 5 », « Doc Manette » (réparation), « Duel de consoles ». Même kicker et même accroche-type à chaque épisode.
+- **Classements** en format « tier list » ou compte à rebours du n°5 au n°1 (le n°1 à la fin pour garder l'attention).
+- **Commentaires** : demander une réponse précise (« Écris ton top 1 en commentaire »), jamais « like et abonne-toi ».
+  Le 1er commentaire pose une question. Les commentaires pèsent plus que les abonnements dans l'algorithme.
+- **Mots-clés** : titre YouTube et légende avec le nom du jeu ou de la console (recherche Shorts), 3 à 5 hashtags.
+- **Actualité** : publier dans les 48 h d'une grosse sortie (GTA 6 le 19 nov.) rapporte nettement plus de vues.
+- **Audio original** (voix ElevenLabs) : à garder, il est favorisé ; ne jamais reposter une vidéo avec un filigrane.
+- Au bilan du dimanche : comparer la rétention moyenne (cible ≥ 65 % pour < 30 s) et les commentaires par vidéo,
+  et garder les séries qui marchent le mieux.
+
 ## Règles de contenu
 
 - Vidéo verticale 1080x1920, 24 à 32 secondes, voix off française sur chaque scène.
