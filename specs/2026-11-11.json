@@ -1,0 +1,85 @@
+{
+ "engine": "motion",
+ "scenes": [
+  {
+   "kicker": "Top 5 · 2026",
+   "title": "Les 5 meilleurs\njeux de 2026",
+   "accent_last": true,
+   "body": "PS5 · Xbox · notes OpenCritic",
+   "duration": 4.5,
+   "voice": "Les cinq meilleurs jeux de deux mille vingt-six sur PS5 et Xbox ! Reste jusqu'au numéro un.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201629_e0141a44-b956-4862-b2e4-4fdfb739ccc0.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201616_a60ed500-fcce-4a4e-80b8-9a445d192ff5.mp4"
+  },
+  {
+   "kicker": "N°5",
+   "big": "89",
+   "title": "Mewgenics",
+   "accent_last": true,
+   "duration": 4.5,
+   "voice": "Numéro cinq : Miou-djénix. Une stratégie folle… et plus de quatre-vingts heures !",
+   "items": [
+    "Stratégie folle, pleine de surprises",
+    "+80 h pour finir"
+   ],
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201618_6ac0312f-eb8e-40d6-a1b4-30787cbd4d59.mp3"
+  },
+  {
+   "kicker": "N°4",
+   "big": "89",
+   "title": "Resident Evil\nRequiem",
+   "accent_last": true,
+   "duration": 4.5,
+   "voice": "Numéro quatre : Resident Evil Requiem. L'horreur qui fait vraiment peur. Onze heures.",
+   "items": [
+    "Horreur étouffante (5/5 Eurogamer)",
+    "≈ 11 h pour finir"
+   ],
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201630_b11501ea-e132-4508-bd6c-c18ba5873c7f.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201617_18f6ba9e-cb25-40d8-9fec-980d5988a088.mp4"
+  },
+  {
+   "kicker": "N°3",
+   "big": "90",
+   "title": "Valheim",
+   "accent_last": true,
+   "duration": 4.5,
+   "voice": "Numéro trois : Valheim, la survie entre potes. Plus de cent vingt heures !",
+   "items": [
+    "Survie et construction entre potes",
+    "+120 h · sur Xbox, pas PS5"
+   ],
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201618_d435891b-921b-44c4-b7ee-88994321f399.mp3"
+  },
+  {
+   "kicker": "N°2",
+   "big": "91",
+   "title": "Mina the Hollower",
+   "accent_last": true,
+   "duration": 4.5,
+   "voice": "Numéro deux : Mina ze Hollower. Une aventure façon Zelda, en dix-huit heures.",
+   "items": [
+    "Aventure façon Zelda, « chef-d'œuvre » (IGN)",
+    "≈ 18 h pour finir"
+   ],
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201618_2deefac1-a40d-46c3-b9dc-05a60d534103.mp3"
+  },
+  {
+   "kicker": "N°1",
+   "big": "91",
+   "title": "Forza Horizon 6",
+   "accent_last": true,
+   "duration": 4.5,
+   "voice": "Numéro un : Forza Horizon 6 ! Presque tous les critiques l'adorent. Vingt-cinq heures.",
+   "items": [
+    "99 % des critiques le recommandent",
+    "Course libre au Japon · ≈ 25 h"
+   ],
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201618_0caa5204-f8c0-42ed-a0dc-e1650b4dfe4c.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201617_3162a203-b44a-4508-9faa-df0d65df8f66.mp4"
+  }
+ ],
+ "cta": true,
+ "cta_voice": "Ton top 1 ? En commentaire ! Nexis Gaming, face à Netflix, à Kolwezi.",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261110_201621_d79cd491-f423-4462-aa30-79ce3927dcaa.mp3"
+}
