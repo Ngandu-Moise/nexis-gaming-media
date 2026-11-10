@@ -48,7 +48,8 @@ sorties, actu, tendances TikTok gaming (recherche web), plus nos meilleures vid�
 | Dimanche | Astuces de jeu | réglages, astuces pour bien démarrer un jeu phare, gestion du stockage |
 
 - Jusqu'au 19 novembre 2026, les sujets « jeux phares » parlent en priorité de GTA 6 (sortie le
-  19 novembre sur PS5 et Xbox Series X|S). Le 19 novembre : « GTA 6 est sorti aujourd'hui ».
+  19 novembre sur PS5 et Xbox Series X|S), sauf le 11 nov. (Top 5 des jeux de 2026, décision du
+  propriétaire le 10 nov. pour éviter trop de GTA d'affilée). Le 19 novembre : « GTA 6 est sorti aujourd'hui ».
 - Si les statistiques montrent qu'un pilier marche nettement mieux, il peut remplacer
   un autre jour pendant une semaine (le noter dans le bilan).
 - Noms : les jeux, consoles et marques (GTA 6, PS5, Xbox, EA Sports FC…) sont nommés librement
@@ -199,14 +200,14 @@ voix ElevenLabs ≈ 2 par vidéo.
 | --- | --- | --- | --- | --- |
 | 7 nov. (sam.) | Devine le jeu en 3 indices | N2 | 37 | 567,45 |
 | 9 nov. (lun.) | Histoire : la saga GTA, de 1997 à GTA 6 (J-10) | N2 | 37 | 530,45 |
-| 11 nov. (mer.) | GTA 6 J-8 : ce qui est confirmé | N2 | 37 | 493,45 |
+| 11 nov. (mer.) | Top 5 des meilleurs jeux de 2026 (notes Metacritic/OpenCritic vérifiées le jour même, sans GTA 6 non sorti) — choix du propriétaire le 10 nov. | N1 (règle 4) | 28,25 | 493,45 |
 | 13 nov. (ven.) | Humour : coupure de courant en pleine mission | N2 | 37 | 456,45 |
 | 15 nov. (dim.) | Prépare ta console pour GTA 6 en 4 étapes | N2 | 37 | 419,45 |
 | 17 nov. (mar.) | Manette qui dérive : répare-la avant GTA 6 | N2 | 37 | 382,45 |
 | 19 nov. (jeu.) | GTA 6 est sorti aujourd'hui (10 h) | N4 | 54,5 | 327,95 |
 | 21 nov. (sam.) | Quiz : vrai ou faux gaming | N3 | 45,75 | 282,20 |
 | 23 nov. (lun.) | Histoire d'un jeu légendaire (choisi au bilan du 22) | N3 | 45,75 | 236,45 |
-| 25 nov. (mer.) | Top 5 des meilleurs jeux de 2026 (sources vérifiées) | N3 | 45,75 | 190,70 |
+| 25 nov. (mer.) | Jeux phares : GTA 6, premières notes et chiffres une semaine après la sortie (sources vérifiées) | N3 | 45,75 | 190,70 |
 | 27 nov. (ven.) | Humour gaming | N3 | 45,75 | 144,95 |
 | 29 nov. (dim.) | Astuces : premiers réglages dans GTA 6 | N3 | 45,75 | 99,20 |
 | 1er déc. (mar.) | Réparation PS5 et manette (dernière vidéo du cycle) | N4 | 54,5 | 44,70 |

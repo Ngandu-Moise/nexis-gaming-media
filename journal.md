@@ -36,7 +36,7 @@ Statistiques TikTok @nexisgs (Metricool, relevées le 8 nov. ~8 h UTC ; rétenti
 
 Sujets de la semaine du 9 au 15 nov. (fil rouge GTA 6, sortie confirmée au 19 nov. — vérifié le 8 nov. : Tweaktown, Shacknews) :
 - 9 nov. (lun., 18 h) : Légendes du jeu #1 — la saga GTA de 1997 à GTA 6 (J-10), N2. Actu GTA = notre meilleur sujet.
-- 11 nov. (mer., 18 h) : GTA 6 J-8 : ce qui est confirmé (plateformes, date), N2.
+- 11 nov. (mer., 18 h) : ~~GTA 6 J-8~~ → Top 5 des meilleurs jeux de 2026 (décision du propriétaire le 10 nov. : trop de GTA d'affilée), N1. GTA 6 revient le 15 nov. ; le 25 nov. devient « GTA 6, premières notes ».
 - 13 nov. (ven., 18 h) : Humour — coupure de courant en pleine mission, N2.
 - 15 nov. (dim., 10 h) : Astuces — prépare ta console pour GTA 6 en 4 étapes (stockage, mise à jour), N2.
 - Ajustement : terminer chaque vidéo par une question précise (« Ton GTA préféré ? Écris-le en commentaire »).
