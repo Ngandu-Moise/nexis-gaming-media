@@ -223,6 +223,11 @@ Fil rouge : compte à rebours GTA 6. Sujets et niveaux : tableau « Plan du cycl
 Chaque fait sur un jeu est revérifié le jour même ; le préchargement GTA 6 (annoncé au 12 nov. par
 la presse) et la taille du jeu ne sont cités que s'ils sont officiels.
 
+## Vidéo préparée à l'avance
+
+Si `videos/AAAA-MM-JJ.mp4` du jour existe déjà (préparée la veille), ne rien générer : contrôler la vidéo puis la programmer
+à l'heure prévue avec la légende notée dans `journal.md`.
+
 ## Publication Metricool
 
 createScheduledPost le jour même à l'heure prévue, convertie dans le fuseau de la marque :
