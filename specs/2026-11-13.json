@@ -1,0 +1,56 @@
+{
+ "engine": "motion",
+ "scenes": [
+  {
+   "kicker": "Humour gaming",
+   "big": "99 %",
+   "title": "Dernière mission",
+   "accent_last": true,
+   "body": "Ce soir, tu la finis !",
+   "duration": 4.5,
+   "voice": "Dernière mission. Quatre-vingt-dix-neuf pour cent… Ce soir, tu la finis !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071040_097869ea-fb36-4053-8337-f9459a6321fa.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071028_d342dd97-657b-4d07-99cd-7ad3f5c2bc9a.mp4"
+  },
+  {
+   "kicker": "Et là…",
+   "title": "COUPURE\nDE COURANT",
+   "accent_last": true,
+   "body": "Évidemment.",
+   "duration": 4.5,
+   "voice": "Et là… coupure de courant. Évidemment.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071040_39310893-c828-4f0a-bed8-68771ca84fe7.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071028_2fde4ed7-7088-4d54-9021-fa80fb478670.mp4"
+  },
+  {
+   "kicker": "Dans le noir",
+   "title": "Les 3 étapes",
+   "accent_last": true,
+   "items": ["1. Le silence total", "2. Tu fixes l'écran noir", "3. Tu attends… sans bouger"],
+   "duration": 4.5,
+   "voice": "Le silence. Tu fixes l'écran noir. Et tu attends… sans bouger.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071040_5236745e-75eb-4395-ab37-4b44996f6658.mp3"
+  },
+  {
+   "kicker": "Le courant revient !",
+   "title": "Dernière sauvegarde :\nil y a 2 h",
+   "accent_last": true,
+   "duration": 4.5,
+   "voice": "Le courant revient ! Dernière sauvegarde… il y a deux heures.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071051_90f38b54-6902-489c-8145-2e895176b216.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071031_69d1aa77-463f-4722-8c57-3ff091de6182.mp4"
+  },
+  {
+   "kicker": "Le conseil Nexis",
+   "title": "Ne perds plus\nta partie",
+   "accent_last": true,
+   "items": ["Sauvegarde souvent", "Console branchée sur un onduleur"],
+   "duration": 4.5,
+   "voice": "Le conseil : sauvegarde souvent, et branche ta console sur un onduleur.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071040_423371f6-f7b4-41a1-88aa-695a20ad07e5.mp3"
+  }
+ ],
+ "cta": true,
+ "cta_voice": "Ça t'est déjà arrivé ? Dis-le en commentaire ! Nexis Gaming, face à Netflix, à Kolwezi.",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261113_071040_50dd5923-fc4b-4013-b765-f147fa6f5a3f.mp3"
+}
