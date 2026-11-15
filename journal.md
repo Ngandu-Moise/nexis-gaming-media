@@ -14,6 +14,7 @@
 | 2026-11-11 18 h (préparée le 10 nov.) | Top 5 des meilleurs jeux de 2026 sur PS5/Xbox (choix et demande du propriétaire : raisons + heures pour finir) — n°5 Mewgenics 89, n°4 Resident Evil Requiem 89, n°3 Valheim 90 (1.0, Xbox seulement), n°2 Mina the Hollower 91, n°1 Forza Horizon 6 91 (99 % recommandent). Notes OpenCritic relevées le 10 nov. (opencritic.com/browse/all/2026, pages des jeux) ; exclus : remakes (Ocarina of Time, Trails 2nd Chapter), DLC (Dave the Diver: In the Jungle), jeux absents de PS5/Xbox ; égalités départagées par le nombre de critiques. Raisons : PC Gamer (Mewgenics), Eurogamer 5/5 (RE Requiem), Giant Bomb (Valheim), IGN (Mina, Forza). Heures (histoire) : HowLongToBeat via Deku Deals (Mewgenics 82,5 h, RE 11 h, Valheim 128 h, Mina 18,5 h), Forza ≈ 25 h (Insider Gaming, HLTB non joignable). N1 : 3 clips Kling 3.0 + 2 refaits (clip 1 : texte parasite sur un t-shirt ; clip 6 : image pivotée à 90°), voix ElevenLabs « Andre » 7 pistes (2 relancées après 429). Durée 45,3 s (au-dessus de la cible : 5 jeux + raisons + heures demandés). Crédits dépensés 45,85 (466,30 → 420,45) | 45,3 s | TikTok, Instagram Reel, YouTube Short | Validée par le propriétaire le 10 nov. — Programmé (Metricool 423798045, 11 nov. 18 h Kolwezi = 17 h Madrid) |
 | 2026-11-12 (contrôle) | Jour sans publication. Vidéo du 11 nov. (Metricool 423798045) : TikTok et YouTube PUBLIÉS, Instagram en ERREUR (« Instagram was disconnected », problème connu). Solde Higgsfield 420,45 (Pro) — conforme au journal, aucune dépense depuis hier | — | — | Contrôle |
 | 2026-11-13 18 h | Humour gaming : « Dernière mission, 99 %… et là, coupure de courant » (sketch : la coupure, les 3 étapes dans le noir, le courant revient mais dernière sauvegarde il y a 2 h ; conseil : sauvegarder souvent + onduleur ; question finale « Ça t'est déjà arrivé ? ») — N1 (règle 4, écart du 11 nov.) : 3 clips Kling 3.0 générés + 1 refait (clip 2 : texte parasite sur le sweat), voix ElevenLabs « Andre » 6 pistes (1 relancée après 429). Aucune dépense Higgsfield trouvée avant la génération (transactions vérifiées). Crédits dépensés 36,65 (420,45 → 383,80) ; cible 456,45 → écart −72,65 (< −20, retard hérité des clips perdus le 9 nov.) : propriétaire notifié, N1 maintenu jusqu'au retour dans la marge (sauf N4 du 19 nov. si la règle 2 le permet). Instagram toujours absent des réseaux Metricool de la marque (le Reel risque de partir en erreur) | 33,2 s | TikTok, Instagram Reel, YouTube Short | Programmé (Metricool 426631609, 13 nov. 18 h Kolwezi = 17 h Madrid) |
+| 2026-11-15 10 h | Astuces : « GTA 6 dans 4 jours : prépare ta console en 4 étapes » — 1. fais de la place (jusqu'à 212 Go : FAQ Rockstar citée par timesaver.gg, maj 9 nov. ; Engadget 10 nov.), 2. lance le préchargement (ouvert sur PS5 et Xbox Series X|S depuis le 9-10 nov. : Engadget), 3. téléchargement auto + mode repos/veille (conseil FAQ Rockstar via timesaver.gg), 4. dépoussière ta console ; sortie le 19 nov. (Engadget). Vérifié le 15 nov. — N1 (règle 4) : 3 clips Kling 3.0 générés, 0 refait (contrôle visuel OK) ; voix ElevenLabs « Andre » 6 pistes + 4 refaites pour raccourcir (1er montage 38,4 s ; 3 relancées après 429). Aucune dépense Higgsfield avant la génération (transactions vérifiées). Crédits dépensés 29,25 (383,80 → 354,55) ; cible 419,45 → écart −64,90 (< −20) : N1 maintenu. Instagram toujours absent des réseaux Metricool de la marque | 28,9 s | TikTok, Instagram Reel, YouTube Short | Programmé (Metricool 428663081, 15 nov. 10 h Kolwezi = 9 h Madrid) |
 
 ## Bilan hebdomadaire — semaine du 1er au 8 novembre 2026 (dimanche 8 nov.)
 
@@ -43,3 +44,26 @@ Sujets de la semaine du 9 au 15 nov. (fil rouge GTA 6, sortie confirmée au 19 n
 - 13 nov. (ven., 18 h) : Humour — coupure de courant en pleine mission, N2.
 - 15 nov. (dim., 10 h) : Astuces — prépare ta console pour GTA 6 en 4 étapes (stockage, mise à jour), N2.
 - Ajustement : terminer chaque vidéo par une question précise (« Ton GTA préféré ? Écris-le en commentaire »).
+
+## Bilan hebdomadaire — semaine du 9 au 15 novembre 2026 (dimanche 15 nov.)
+
+Statistiques TikTok @nexisgs (Metricool, relevées le 15 nov. ~7 h 30 UTC ; rétention et « Pour toi » non fournies par Metricool ; la vidéo du 13 nov. n'apparaît pas encore dans les statistiques) :
+
+| Date | Vidéo | Durée | Vues | J'aime | Comm. | Partages |
+| --- | --- | --- | --- | --- | --- | --- |
+| 7 nov. | Devine le jeu en 3 indices | 31 s | 145 | 8 | 5 | 0 |
+| 9 nov. | Légendes du jeu #1 : la saga GTA | 31 s | 395 | 21 | 0 | 0 |
+| 11 nov. | Top 5 des jeux de 2026 | 45 s | 62 | 1 | 0 | 0 |
+| 13 nov. | Humour : coupure de courant | 33 s | — | — | — | — |
+
+- Meilleur sujet : encore l'actu GTA (saga GTA = 395 vues, ×6 le Top 5). Le Top 5 (45 s, trop long, jeux peu connus localement) est le plus faible.
+- Commentaires : seul le quiz en génère (5). Garder une question à réponse courte, façon quiz, en fin de vidéo.
+- Crédits Higgsfield cette semaine (9-15 nov.) : 196 dépensés (84,15 le 9, 45,85 le 11, 36,65 le 13, 29,25 le 15, dont 36,95 de clips perdus le 9) ; solde 354,55 au 15 nov., cible 419,45 → écart −64,90 : niveau N1 maintenu (règle 4).
+- Heures : 10 h et 18 h conservées.
+- Problème ouvert : Instagram toujours déconnecté de Metricool (tous les Reels partent en erreur) — à reconnecter par le propriétaire.
+
+Sujets de la semaine du 16 au 22 nov. (fil rouge GTA 6, sortie le 19 nov., préchargement ouvert : Engadget 10 nov.) :
+- 17 nov. (mar., 18 h) : Doc Manette — « Ta manette dérive ? Répare-la avant GTA 6 », N1.
+- 19 nov. (jeu., 10 h) : « GTA 6 est sorti aujourd'hui » (faits revérifiés le jour même). N4 non permis par la règle 2 (solde prévu après ≈ 271,80 < 307,95) ; niveau selon la règle 4 (N1), passer à N2 seulement si le solde du jour le permet sans creuser l'écart.
+- 21 nov. (sam., 10 h) : Quiz « Vrai ou faux GTA » (format qui génère le plus de commentaires), N1.
+
