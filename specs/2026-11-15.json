@@ -26,31 +26,34 @@
    "accent_last": true,
    "body": "Déjà ouvert sur PS5 et Xbox Series X|S",
    "duration": 4.5,
-   "voice": "Étape deux : lance le préchargement. Il est déjà ouvert sur PS5 et Xbox Série X et S.",
-   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_071022_6a48f4a6-6b27-4476-8d86-1bf386d8472a.mp3",
+   "voice": "Étape deux : lance le préchargement. Il est déjà ouvert !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_072426_f7f07342-2b4e-4f15-8376-b4bd6af9f4d9.mp3",
    "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_071019_713e0eb5-8357-4ea3-ae4b-dde61d9134dd.mp4"
   },
   {
    "kicker": "Étape 3",
    "title": "Téléchargement\nautomatique",
    "accent_last": true,
-   "items": ["PS5 : mode repos", "Xbox : mode veille"],
+   "items": [
+    "PS5 : mode repos",
+    "Xbox : mode veille"
+   ],
    "duration": 4.5,
-   "voice": "Étape trois : active les téléchargements automatiques, et laisse ta console en mode repos.",
-   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_071022_0d11d717-2198-4175-bbf2-3d451d8d3efb.mp3"
+   "voice": "Étape trois : téléchargement auto, console en mode repos.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_072433_1d0a8f14-bbd0-468d-a600-843ffc1a855b.mp3"
   },
   {
    "kicker": "Étape 4",
    "title": "Dépoussière\nta console",
    "accent_last": true,
-   "body": "Moins de chaleur pendant tes longues sessions",
+   "body": "Elle chauffera moins",
    "duration": 4.5,
-   "voice": "Étape quatre : dépoussière-la. Moins de chaleur pendant tes longues sessions !",
-   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_071022_42d73ce1-aa8a-40fe-b1cb-5e378d3d8094.mp3",
+   "voice": "Étape quatre : dépoussière-la. Elle chauffera moins !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_072426_b3c661a3-ee8f-4e13-83a7-b809aaa96dbb.mp3",
    "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_071020_d0852010-26a3-4852-986b-5d1bb58cb5b7.mp4"
   }
  ],
  "cta": true,
- "cta_voice": "Alors, ta console est prête ? Réponds en commentaire ! Nexis Gaming, face à Netflix, à Kolwezi.",
- "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_071040_0d71159c-4b45-449f-87af-a02d47b408c6.mp3"
+ "cta_voice": "Alors, t'es prêt ? Dis-le en commentaire ! Nexis Gaming, à Kolwezi.",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261115_072426_fd85a512-3bce-4a44-a7bf-28bd5b20c6e1.mp3"
 }
