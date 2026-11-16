@@ -93,7 +93,7 @@ montré), sketch d'humour court, compilation de moments forts. Ce qu'on en appli
 
 ## Règles de contenu
 
-- Vidéo verticale 1080x1920, 24 à 32 secondes, voix off française sur chaque scène.
+- Vidéo verticale 4K 2160x3840 (copie 1080x1920 pour Instagram), 24 à 32 secondes, voix off française sur chaque scène.
 - Scène 1 = accroche en moins de 2 s (question, chiffre, « attention », réaction forte).
 - Ton : jeune, direct, tutoiement, français simple. Pas de vulgarité, pas de politique.
 - Prix et disponibilités : UNIQUEMENT ceux de `produits.md`. Liste vide ou produit absent
@@ -104,9 +104,24 @@ montré), sketch d'humour court, compilation de moments forts. Ce qu'on en appli
   clips IA, aucune ressemblance avec une vraie personne.
 - Ne pas répéter un sujet publié dans les 10 derniers jours (voir `journal.md`).
 
+## Qualité 4K (décision du propriétaire, 16 nov. 2026)
+
+- **Clips IA : uniquement en mode `4k`** de Kling 3.0 (plus jamais `pro` ni `std`). Coût vérifié le
+  16 nov. : **30 crédits par clip de 5 s** (au lieu de 8,75 en pro).
+- **Vidéo publiée en 4K verticale 2160x3840** (montage automatique : textes capturés au double,
+  un seul encodage final de haute qualité). Cause du flou constatée le 16 nov. : fichiers 1080p à
+  ≈ 2,3 Mbit/s, compressés 4 à 5 fois jusqu'à YouTube. Les envois en 1440p ou plus reçoivent
+  en général une meilleure compression sur YouTube.
+- Le montage produit aussi `videos/AAAA-MM-JJ-1080.mp4` (1080x1920) pour Instagram, dont l'API
+  Reels refuse plus de 1920 px de large. Tant qu'Instagram est déconnecté de Metricool, ne rien en faire ;
+  une fois reconnecté, programmer Instagram dans une publication séparée avec ce fichier.
+- Moins de clips par vidéo (budget) : les scènes sans clip passent en motion design (fond animé),
+  le clip 4K va en priorité sur l'accroche (scène 1).
+
 ## Format d'une vidéo (moteur « motion »)
 
-Format standard « premium » (niveau N2, voir « Budget ») :
+Ancien format « premium » N2 en clips pro (avant le 16 nov.), conservé pour mémoire ; depuis le
+16 nov., niveaux K1 à K3 en clips 4K (voir « Budget ») :
 
 | Scène | Durée | Contenu | Source | Crédits |
 | --- | --- | --- | --- | --- |
@@ -141,9 +156,9 @@ Voix : 1 ou 2 phrases courtes par scène ; "voice" garde le texte, "voice_url" l
 
 ### Clips Higgsfield
 
-- generate_video_batch, une requête par clip du niveau choisi (N1 = 3, N2 = 4, N3/N4 = 5) : model `kling3_0`, aspect_ratio `9:16`, duration 5,
-  mode `pro`, sound `off`, use_unlim false (accroche N4 : duration 10). Avant : generate_video avec
-  get_cost true pour vérifier le prix (8,75 pour 5 s, 17,5 pour 10 s) et balance pour le solde. Puis jobs_wait jusqu'à la fin.
+- generate_video_batch, une requête par clip du niveau choisi (K1 = 1, K2 = 2, K3 = 3) : model `kling3_0`, aspect_ratio `9:16`, duration 5,
+  mode **`4k`**, sound `off`, use_unlim false. Avant : generate_video avec
+  get_cost true pour vérifier le prix (30 pour 5 s en 4K) et balance pour le solde. Puis jobs_wait jusqu'à la fin.
 - Style commun des prompts (en anglais) : vertical cinematic shot, night, small modern video game
   shop or gamer bedroom lit by cyan and magenta neon, young Black African people in casual
   streetwear (fictional), plain black consoles/controllers with no logos, screens showing only
@@ -154,9 +169,9 @@ Voix : 1 ou 2 phrases courtes par scène ; "voice" garde le texte, "voice_url" l
 ### Montage
 
 - Commit + push du spec : le workflow GitHub « Rendu vidéo » télécharge les clips, monte la vidéo
-  (≈ 6 à 10 min) et pousse `videos/AAAA-MM-JJ.mp4`. Attendre avec
+  en 4K (≈ 15 à 25 min) et pousse `videos/AAAA-MM-JJ.mp4` (+ `-1080.mp4`). Attendre avec
   `gh api repos/Ngandu-Moise/nexis-gaming-media/contents/videos/AAAA-MM-JJ.mp4` (toutes les 30 s,
-  20 min maximum), puis `git pull`. Échec : lire le journal du run (outils GitHub Actions).
+  45 min maximum), puis `git pull`. Fichier limité à 95 Mo (réencodé automatiquement au-delà). Échec : lire le journal du run (outils GitHub Actions).
 - Contrôle : extraire une image au milieu de chaque scène (ffmpeg) et les regarder. Refuser :
   mains ou visages déformés, logo ou texte parasite, élément protégé, texte illisible ou coupé.
 - Clip refusé : le refaire une seule fois (nouveau prompt), repousser le spec. Second échec :
@@ -166,16 +181,21 @@ Voix : 1 ou 2 phrases courtes par scène ; "voice" garde le texte, "voice_url" l
 ## Budget de crédits : zéro crédit perdu (600 par cycle, du 3 au 2 du mois suivant)
 
 Objectif : finir chaque cycle avec **moins de 1 crédit** non utilisé. Les crédits ne sont pas reportés.
-Prix vérifiés le 6 nov. 2026 : clip Kling 3.0 5 s = 8,75 ; 10 s = 17,5 ; image gpt_image_2_6 = 0,25 ;
-voix ElevenLabs ≈ 2 par vidéo.
+Prix vérifiés : clip Kling 3.0 5 s en **4K = 30** (16 nov. 2026) ; image gpt_image_2_6 = 0,25 ;
+voix ElevenLabs ≈ 2 par vidéo. Depuis le 16 nov., seuls les niveaux 4K ci-dessous sont utilisés
+(N1 à N4 en clips pro : abandonnés).
 
 | Niveau | Contenu | Crédits |
 | --- | --- | --- |
-| N1 | 3 clips + voix | 28,25 |
-| N2 premium (standard) | 4 clips + voix | 37 |
-| N3 tout IA | 5 clips + voix | 45,75 |
-| N4 événement | accroche 10 s + 4 clips + voix | 54,5 |
-| Reprise | 1 clip refait | 8,75 |
+| K0 | motion design sans clip + voix | 2 |
+| K1 | 1 clip 4K (accroche) + voix | 32 |
+| K2 | 2 clips 4K + voix | 62 |
+| K3 | 3 clips 4K + voix | 92 |
+| Reprise | 1 clip 4K refait | 30 |
+
+Dans les règles ci-dessous, lire « 8,75 » (reprise) comme **30**, « 28,25 » (plus petit niveau
+avec clips) comme **32**, « N4 » comme le niveau le plus élevé que permet le reste, et « monter /
+descendre d'un niveau » sur l'échelle K0 → K3.
 
 ### Règle de calcul (chaque jour de publication, avant de générer)
 
@@ -194,7 +214,24 @@ voix ElevenLabs ≈ 2 par vidéo.
 5. Solde < 10 → aucun clip (voix seule si possible). Ne jamais acheter de crédits ni changer
    d'abonnement.
 
-### Plan du cycle 3 nov. → 2 déc. 2026 (solde 604,45 le 6 nov.)
+### Plan révisé en 4K (16 nov. 2026, solde 354,55)
+
+| Date | Vidéo | Niveau | Crédits | Solde cible après |
+| --- | --- | --- | --- | --- |
+| 17 nov. (mar.) | Doc Manette : manette qui dérive, avant GTA 6 | K1 | 32 | 322,55 |
+| 19 nov. (jeu.) | GTA 6 est sorti aujourd'hui (10 h) — événement | K2 | 62 | 260,55 |
+| 21 nov. (sam.) | Quiz : vrai ou faux GTA | K1 | 32 | 228,55 |
+| 23 nov. (lun.) | Histoire d'un jeu légendaire (choisi au bilan du 22) | K1 | 32 | 196,55 |
+| 25 nov. (mer.) | GTA 6 : premières notes et chiffres (sources vérifiées) | K1 | 32 | 164,55 |
+| 27 nov. (ven.) | Humour gaming | K1 | 32 | 132,55 |
+| 29 nov. (dim.) | Astuces : premiers réglages dans GTA 6 | K1 | 32 | 100,55 |
+| 1er déc. (mar.) | Réparation PS5 et manette (dernière vidéo du cycle) | K3 | 92 | 8,55 |
+| 2 déc. (mer.) | pas de vidage (reste < 32) : images de fond 0,25 | — | ≈ 8,55 | ≈ 0 |
+
+Chaque reprise (30) est prise sur la vidéo du 1er déc. (K3 → K2). Cycles suivants (600 crédits,
+≈ 15 vidéos) : budget ≈ 38 par vidéo, donc K1 en standard, K2 les jours d'événement.
+
+### Ancien plan du cycle 3 nov. → 2 déc. 2026 en clips pro (remplacé le 16 nov.)
 
 | Date | Vidéo | Niveau | Crédits | Solde cible après |
 | --- | --- | --- | --- | --- |

@@ -10,7 +10,8 @@ const fs = require('fs'), path = require('path');
   const spec = JSON.parse(fs.readFileSync(specPath)), T = JSON.parse(fs.readFileSync(tlPath));
   const N = Math.round((T.at(-1).start + T.at(-1).dur) * 30);
   const b = await chromium.launch({ args: ['--allow-file-access-from-files'] });
-  const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  // page conçue en 1080x1920, capturée au double (2160x3840, 4K) : textes nets
+  const p = await b.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 2 });
   await p.goto('file://' + path.join(__dirname, 'page.html'));
   await p.evaluate(() => document.fonts.ready);
   await p.evaluate(([s, t]) => window.setup(s, t), [spec, T]);
@@ -22,7 +23,8 @@ const fs = require('fs'), path = require('path');
   }
   const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-i', a3, '-f', 'image2pipe', '-framerate', '30', '-c:v', 'png', '-i', '-',
     '-filter_complex', '[0:v][1:v]overlay=format=auto:shortest=1,format=yuv420p[v]', '-map', '[v]',
-    '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-r', '30', a4], { stdio: ['pipe', 'inherit', 'inherit'] });
+    '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', '-maxrate', '20M', '-bufsize', '40M',
+    '-profile:v', 'high', '-level', '5.1', '-r', '30', a4], { stdio: ['pipe', 'inherit', 'inherit'] });
   for (let f = 0; f < N; f++) {
     await p.evaluate(f => window.setFrame(f), f);
     const buf = await p.screenshot({ type: 'png', omitBackground: true });

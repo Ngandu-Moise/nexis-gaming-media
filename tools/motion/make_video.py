@@ -23,6 +23,8 @@ sys.path.insert(0, os.path.dirname(HERE))
 import render  # say() (voix Piper) et music() (boucle libre de droits)
 
 FPS = 30
+W, H = 2160, 3840  # sortie 4K verticale (décision du propriétaire, 16 nov. 2026)
+MAX_BYTES = 95_000_000  # limite GitHub : 100 Mo par fichier
 CTA_VOICE = "Nexis Gaming, avenue du 30 juin, face à Netflix, à Kolwezi. Écris-nous en privé !"
 
 
@@ -80,19 +82,19 @@ def main(spec_path, out, stills=False):
         subprocess.run(["node", os.path.join(HERE, "frames.js"), spec_js, tl_js, "--stills", prefix, *fr], check=True)
         print("images :", ", ".join(f"{prefix}-{f}.png" for f in fr))
         return
-    # piste de fond : clip IA recadré 1080x1920 (ralenti léger ou dernière image prolongée), sinon noir
+    # piste de fond : clip IA recadré en 4K 2160x3840 (ralenti léger ou dernière image prolongée), sinon noir
     parts = []
     for i, (sc, x) in enumerate(zip(items, tl)):
         part, d = os.path.join(tmp, f"b{i}.mp4"), x["dur"]
         if sc.get("clip"):
             src = fetch(sc["clip"], os.path.join(tmp, f"clip{i}.mp4"))
             k = min(1.35, max(1.0, d / probe(src)))
-            vf = (f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setpts={k:.3f}*PTS,"
+            vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setpts={k:.3f}*PTS,"
                   f"tpad=stop_mode=clone:stop_duration={d},trim=duration={d},fps={FPS},format=yuv420p")
             run(["ffmpeg", "-y", "-i", src, "-an", "-vf", vf, "-c:v", "libx264", "-preset", "veryfast",
-                 "-crf", "16", "-r", str(FPS), part])
+                 "-crf", "10", "-r", str(FPS), part])  # intermédiaire quasi sans perte
         else:
-            run(["ffmpeg", "-y", "-f", "lavfi", "-i", f"color=c=black:s=1080x1920:r={FPS}:d={d}",
+            run(["ffmpeg", "-y", "-f", "lavfi", "-i", f"color=c=black:s={W}x{H}:r={FPS}:d={d}",
                  "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p", part])
         parts.append(part)
     lst = os.path.join(tmp, "list.txt")
@@ -114,8 +116,20 @@ def main(spec_path, out, stills=False):
     partial = out + ".part.mp4"
     run(["ffmpeg", "-y", "-i", silent, "-i", mus, *inputs, "-filter_complex", mix, "-map", "0:v", "-map", "[a]",
          "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-t", f"{total:.3f}", "-movflags", "+faststart", partial])
+    if os.path.getsize(partial) > MAX_BYTES:  # trop lourd pour GitHub : réencodage au débit qui tient
+        kbps = int(MAX_BYTES * 8 / total / 1000) - 400
+        small = out + ".small.mp4"
+        run(["ffmpeg", "-y", "-i", partial, "-c:v", "libx264", "-preset", "medium", "-b:v", f"{kbps}k",
+             "-maxrate", f"{kbps}k", "-bufsize", f"{2*kbps}k", "-pix_fmt", "yuv420p", "-c:a", "copy",
+             "-movflags", "+faststart", small])
+        os.replace(small, partial)
     os.replace(partial, out)
-    print(out, f"{probe(out):.1f} s")
+    # copie 1080x1920 pour Instagram (l'API Reels refuse plus de 1920 px de large)
+    ig = os.path.splitext(out)[0] + "-1080.mp4"
+    run(["ffmpeg", "-y", "-i", out, "-vf", "scale=1080:1920:flags=lanczos", "-c:v", "libx264", "-preset", "medium",
+         "-crf", "17", "-maxrate", "10M", "-bufsize", "20M", "-pix_fmt", "yuv420p", "-c:a", "copy",
+         "-movflags", "+faststart", ig])
+    print(out, f"{probe(out):.1f} s", f"{os.path.getsize(out)/1e6:.0f} Mo", "· copie Instagram :", ig)
 
 
 if __name__ == "__main__":
