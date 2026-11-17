@@ -1,0 +1,57 @@
+{
+ "engine": "motion",
+ "scenes": [
+  {
+   "kicker": "Doc Manette #1",
+   "title": "Ta manette\ndérive ?",
+   "accent_last": true,
+   "body": "GTA 6 sort après-demain",
+   "duration": 4.5,
+   "voice": "Ton perso bouge tout seul ? Ta manette dérive… et GTA 6 sort après-demain !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261117_070946_d2be7748-fbd3-4c4b-a978-0290a4006e2c.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261117_070944_2d6a07b9-9ded-4a72-9fb1-8c5e83c0dbb9.mp4"
+  },
+  {
+   "kicker": "La cause",
+   "title": "Usure\n+ poussière",
+   "accent_last": true,
+   "body": "Le joystick s'use à l'intérieur",
+   "duration": 4.5,
+   "voice": "La cause : le joystick s'use à l'intérieur, et la poussière s'y glisse.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261117_070946_ff658d63-cee8-414d-898b-6cdd33156de6.mp3"
+  },
+  {
+   "kicker": "Astuce 1",
+   "title": "Souffle\net mets à jour",
+   "accent_last": true,
+   "items": [
+    "Air sec autour du stick",
+    "Mise à jour de la manette"
+   ],
+   "duration": 4.5,
+   "voice": "Un : souffle de l'air sec autour du stick, et mets la manette à jour.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261117_070946_2ab55fb4-e85f-4803-a739-38aa02594099.mp3"
+  },
+  {
+   "kicker": "Astuce 2",
+   "title": "Réinitialise\nta manette",
+   "accent_last": true,
+   "body": "Petit bouton au dos",
+   "duration": 4.5,
+   "voice": "Deux : réinitialise-la avec le petit bouton au dos.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261117_070953_bc6599fe-aae3-40e4-8cdd-12e768ceeeb0.mp3"
+  },
+  {
+   "kicker": "Ça dérive encore ?",
+   "title": "On change\nle joystick",
+   "accent_last": true,
+   "body": "Réparation chez Nexis Gaming",
+   "duration": 4.5,
+   "voice": "Ça dérive encore ? Le joystick est usé : on le remplace chez Nexis Gaming !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261117_070946_5de85be3-e76e-4573-b1f7-89850a2cfa99.mp3"
+  }
+ ],
+ "cta": true,
+ "cta_voice": "Ta manette dérive aussi ? Réponds oui ou non en commentaire ! Nexis Gaming, à Kolwezi.",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261117_070946_4eb695d6-2efa-49e5-a1e0-1c8731439331.mp3"
+}
