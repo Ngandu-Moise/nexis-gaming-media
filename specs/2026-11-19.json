@@ -1,0 +1,58 @@
+{
+ "engine": "motion",
+ "scenes": [
+  {
+   "kicker": "GTA 6 · Jour J",
+   "title": "GTA 6\nest sorti !",
+   "accent_last": true,
+   "body": "Depuis minuit sur PS5 et Xbox",
+   "duration": 4.5,
+   "voice": "Ça y est ! GTA 6 est sorti cette nuit, à minuit, sur PS5 et Xbox Série X et S !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180013_01b6729e-d4aa-43a9-8c3f-8443840226f2.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180011_6903d39d-680c-4391-a4ab-4f50f1104496.mp4"
+  },
+  {
+   "kicker": "Attention",
+   "title": "Seulement\nPS5 et Xbox",
+   "accent_last": true,
+   "cross": [
+    "PC",
+    "PS4"
+   ],
+   "duration": 4.0,
+   "voice": "Attention : pas de version PC, ni PS4, pour l'instant.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180013_4360bed8-0375-4689-85d4-a47c2dcba0f6.mp3"
+  },
+  {
+   "kicker": "Avant de jouer",
+   "big": "212 Go",
+   "title": "de place\nsur ta console",
+   "accent_last": true,
+   "duration": 4.0,
+   "voice": "Avant de jouer, prévois jusqu'à 212 gigas de place sur ta console !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180020_da2707d6-b28b-4137-8329-15340d108a61.mp3"
+  },
+  {
+   "kicker": "Et en ligne ?",
+   "title": "Solo\npour l'instant",
+   "accent_last": true,
+   "body": "Pas encore de mode en ligne",
+   "duration": 4.0,
+   "voice": "Et pour le moment, c'est du solo : pas encore de mode en ligne.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180013_fd6690be-db86-40de-bbf2-5d83ecdf2622.mp3"
+  },
+  {
+   "kicker": "Pas encore prêt ?",
+   "title": "On installe\ntout chez Nexis",
+   "accent_last": true,
+   "body": "PS5 et Xbox Series",
+   "duration": 4.5,
+   "voice": "Pas encore prêt ? On t'aide à tout installer chez Nexis Gaming !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180020_e5a2b370-908e-458f-bbda-7165708e77ad.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180010_2bd56933-1ee2-4b1e-9b11-127e0e6844e2.mp4"
+  }
+ ],
+ "cta": true,
+ "cta_voice": "Envoie ça à ton pote qui attend GTA 6 depuis des années ! Nexis Gaming, à Kolwezi.",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180013_d1604760-3a00-455b-9a69-f071326f4367.mp3"
+}
