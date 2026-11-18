@@ -91,6 +91,30 @@ montré), sketch d'humour court, compilation de moments forts. Ce qu'on en appli
 - Au bilan du dimanche : comparer la rétention moyenne (cible ≥ 65 % pour < 30 s) et les commentaires par vidéo,
   et garder les séries qui marchent le mieux.
 
+## Leçons de l'analyse du 18 nov. 2026 (obligatoires, demande du propriétaire)
+
+Analyse TikTok du 1er au 15 nov. : les posts avec #gta6 font ≈ 530 vues en moyenne contre ≈ 280 sans ;
+le Top 5 de jeux peu connus (45 s) = 66 vues ; l'humour du quotidien a le meilleur taux de j'aime (7,8 %) ;
+seul le quiz fait commenter ; presque aucun partage. Règles qui en découlent :
+
+1. **Un nom très connu au Congo dans chaque vidéo** (GTA 6, PS5, manette PS5, EA Sports FC/FIFA, Call of Duty,
+   Fortnite, Mortal Kombat, PES/eFootball) : dans l'accroche (titre de la scène 1), la 1re ligne de la légende,
+   le titre YouTube et un hashtag. Jamais de vidéo construite autour de jeux peu connus localement
+   (pas de classement de jeux indés ou de niche).
+2. **Hashtags (5)** : le jeu ou la console vedette (#gta6 tant que GTA 6 est l'actu, au moins jusqu'au 6 déc.),
+   #ps5, #kolwezi, #gamingrdc, + 1 tag de format (#humourgaming, #quizgaming, #reparationmanette…).
+3. **Durée : 25 à 32 s, plafond strict.** Montage > 32 s → raccourcir les voix et re-rendre. Classement = 3 éléments
+   maximum (pas 5).
+4. **Humour = vie quotidienne à Kolwezi + jeu connu** (coupures de courant, la moto-taxi, le pote qui squatte la manette,
+   la maman qui appelle en pleine partie de GTA 6…). C'est le format le plus aimé : en faire au moins 1 sur 4.
+5. **Quiz = le jeu est nommé** dans le titre et les hashtags (« Vrai ou faux GTA 6 », « Devine le joueur EA FC ») ;
+   seule la réponse reste cachée. Réponse demandée en un mot dans les commentaires.
+6. **Appel au partage** dans la dernière scène et la légende : « Envoie ça à ton pote qui… » (cible : ≥ 1 partage
+   par vidéo). La question pour les commentaires reste en 1er commentaire.
+7. **Ponctualité** : la publication part à l'heure prévue ; un retard > 1 h se note dans le journal.
+8. **Bilan du dimanche** : relever pour chaque vidéo vues, j'aime, commentaires et partages, puis comparer
+   « nom connu / pas de nom connu » et « humour / info / quiz » pour confirmer ou corriger ces règles.
+
 ## Règles de contenu
 
 - Vidéo verticale 4K 2160x3840 (copie 1080x1920 pour Instagram), 24 à 32 secondes, voix off française sur chaque scène.
@@ -220,10 +244,10 @@ descendre d'un niveau » sur l'échelle K0 → K3.
 | --- | --- | --- | --- | --- |
 | 17 nov. (mar.) | Doc Manette : manette qui dérive, avant GTA 6 | K1 | 32 | 322,55 |
 | 19 nov. (jeu.) | GTA 6 est sorti aujourd'hui (10 h) — événement | K2 | 62 | 260,55 |
-| 21 nov. (sam.) | Quiz : vrai ou faux GTA | K1 | 32 | 228,55 |
-| 23 nov. (lun.) | Histoire d'un jeu légendaire (choisi au bilan du 22) | K1 | 32 | 196,55 |
+| 21 nov. (sam.) | Quiz : « Vrai ou faux GTA 6 » (3 affirmations, réponse en 1 mot en commentaire) | K1 | 32 | 228,55 |
+| 23 nov. (lun.) | Légendes du jeu #2 : de FIFA à EA Sports FC (jeu de foot très connu localement ; à confirmer au bilan du 22) | K1 | 32 | 196,55 |
 | 25 nov. (mer.) | GTA 6 : premières notes et chiffres (sources vérifiées) | K1 | 32 | 164,55 |
-| 27 nov. (ven.) | Humour gaming | K1 | 32 | 132,55 |
+| 27 nov. (ven.) | Humour : la vie quotidienne à Kolwezi pendant une partie de GTA 6 (ex. « juste une mission » à 2 h du matin) | K1 | 32 | 132,55 |
 | 29 nov. (dim.) | Astuces : premiers réglages dans GTA 6 | K1 | 32 | 100,55 |
 | 1er déc. (mar.) | Réparation PS5 et manette (dernière vidéo du cycle) | K3 | 92 | 8,55 |
 | 2 déc. (mer.) | pas de vidage (reste < 32) : images de fond 0,25 | — | ≈ 8,55 | ≈ 0 |
