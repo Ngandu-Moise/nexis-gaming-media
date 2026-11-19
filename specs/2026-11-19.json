@@ -6,10 +6,10 @@
    "title": "GTA 6\nest sorti !",
    "accent_last": true,
    "body": "Depuis minuit sur PS5 et Xbox",
-   "duration": 4.5,
-   "voice": "Ça y est ! GTA 6 est sorti cette nuit, à minuit, sur PS5 et Xbox Série X et S !",
-   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180013_01b6729e-d4aa-43a9-8c3f-8443840226f2.mp3",
-   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180011_6903d39d-680c-4391-a4ab-4f50f1104496.mp4"
+   "duration": 4.0,
+   "voice": "Ça y est ! GTA 6 est sorti cette nuit, à minuit !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261119_031309_1a261064-c513-4492-88c0-20694d439485.mp3",
+   "clip": "https://d2ol7oe51mr4n9.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/a094eea2-203c-4f7a-82d2-65ca7ff14b99.mp4"
   },
   {
    "kicker": "Attention",
@@ -20,11 +20,12 @@
     "PS4"
    ],
    "duration": 4.0,
-   "voice": "Attention : pas de version PC, ni PS4, pour l'instant.",
-   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180013_4360bed8-0375-4689-85d4-a47c2dcba0f6.mp3"
+   "voice": "Pas de PS4, ni de PC : seulement PS5 et Xbox !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261119_031352_e674d949-d808-418b-a426-78086160f161.mp3",
+   "body": "Xbox Series X|S · pour l'instant"
   },
   {
-   "kicker": "Avant de jouer",
+   "kicker": "Prévois jusqu'à",
    "big": "212 Go",
    "title": "de place\nsur ta console",
    "accent_last": true,
@@ -46,13 +47,13 @@
    "title": "GTA 6 est\ndispo en boutique !",
    "accent_last": true,
    "body": "Avenue du 30 Juin, Kolwezi",
-   "duration": 4.5,
-   "voice": "Bonne nouvelle : GTA 6 est disponible chez Nexis Gaming ! Viens le chercher !",
-   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_185100_b9681add-18bc-4ffc-9934-2e9cd248fd8c.mp3",
+   "duration": 4.0,
+   "voice": "Et GTA 6 est dispo chez Nexis Gaming ! Viens le chercher !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261119_031309_26c2ba97-d4d0-4dee-b94b-1e5d3e2942aa.mp3",
    "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180010_2bd56933-1ee2-4b1e-9b11-127e0e6844e2.mp4"
   }
  ],
  "cta": true,
- "cta_voice": "Envoie ça à ton pote qui attend GTA 6 depuis des années ! Nexis Gaming, à Kolwezi.",
- "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261118_180013_d1604760-3a00-455b-9a69-f071326f4367.mp3"
+ "cta_voice": "Envoie ça à ton pote qui attend GTA 6 ! Nexis Gaming, à Kolwezi.",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261119_031320_71971c6c-c413-46f3-842c-362360670dbd.mp3"
 }
