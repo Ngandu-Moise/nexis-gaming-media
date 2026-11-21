@@ -24,18 +24,20 @@
    "kicker": "Question 2",
    "title": "GTA 6 marche\nsur PS4 ?",
    "accent_last": true,
-   "cross": ["PS4"],
+   "cross": [
+    "PS4"
+   ],
    "body": "FAUX ! Seulement PS5 et Xbox Series X|S",
    "duration": 3.0,
    "voice": "Deux : GTA 6 marche sur PS4. Faux ! Seulement sur PS5 et Xbox.",
    "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_070954_c0328cdd-d158-4808-90f5-dff2c71ef03f.mp3"
   },
   {
-   "kicker": "Question 3",
-   "big": "+3 milliards $",
-   "title": "en un seul jour ?",
+   "kicker": "Question 3 · plus de",
+   "big": "3 Md",
+   "title": "de dollars\nen 1 seul jour ?",
    "accent_last": true,
-   "body": "Vrai ou faux ? Réponds en commentaire !",
+   "body": "Vrai ou faux ? Réponds en commentaire",
    "duration": 3.0,
    "voice": "Trois : GTA 6 a fait plus de trois milliards de dollars en un seul jour. Vrai ou faux ? Réponds en commentaire !",
    "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_070954_bd049b40-5608-49ba-a840-4a27e1c4cfb5.mp3"
