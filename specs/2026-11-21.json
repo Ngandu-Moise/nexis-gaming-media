@@ -1,0 +1,47 @@
+{
+ "engine": "motion",
+ "scenes": [
+  {
+   "kicker": "Vrai ou faux · GTA 6",
+   "title": "Vrai ou faux\nGTA 6 ?",
+   "accent_last": true,
+   "body": "3 questions · sois rapide !",
+   "duration": 3.0,
+   "voice": "Vrai ou faux, spécial GTA 6 ! Trois questions, sois rapide !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_070954_8f45c650-d0c5-42a6-8f93-727c748339b8.mp3",
+   "clip": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_070952_10806127-4ec8-44ce-850d-58b211366476.mp4"
+  },
+  {
+   "kicker": "Question 1",
+   "title": "GTA 6 se passe\nà Los Santos ?",
+   "accent_last": true,
+   "body": "FAUX ! Vice City, État de Leonida",
+   "duration": 3.0,
+   "voice": "Un : GTA 6 se passe à Los Santos. Faux ! C'est Vice City, dans l'État de Leonida.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_070954_d35d3113-c831-4737-b154-182feef67a74.mp3"
+  },
+  {
+   "kicker": "Question 2",
+   "title": "GTA 6 marche\nsur PS4 ?",
+   "accent_last": true,
+   "cross": ["PS4"],
+   "body": "FAUX ! Seulement PS5 et Xbox Series X|S",
+   "duration": 3.0,
+   "voice": "Deux : GTA 6 marche sur PS4. Faux ! Seulement sur PS5 et Xbox.",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_070954_c0328cdd-d158-4808-90f5-dff2c71ef03f.mp3"
+  },
+  {
+   "kicker": "Question 3",
+   "big": "+3 milliards $",
+   "title": "en un seul jour ?",
+   "accent_last": true,
+   "body": "Vrai ou faux ? Réponds en commentaire !",
+   "duration": 3.0,
+   "voice": "Trois : GTA 6 a fait plus de trois milliards de dollars en un seul jour. Vrai ou faux ? Réponds en commentaire !",
+   "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_070954_bd049b40-5608-49ba-a840-4a27e1c4cfb5.mp3"
+  }
+ ],
+ "cta": true,
+ "cta_voice": "Envoie ça à ton pote fan de GTA 6 ! Nexis Gaming, à Kolwezi.",
+ "cta_voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jucqm73y8FCLAk5pi90Atx6ueJ/hf_20261121_071001_7504fb35-ffa9-4a2f-b30e-42667ef7dd43.mp3"
+}
